@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main.apps.MainConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,11 @@ WSGI_APPLICATION = 'olympic_games.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'olympic_games',
+        'USER': os.environ.get('TEXNOPROM_DB_LOGIN'),
+        'PASSWORD': '20101995',
+        'HOST': 'localhost',
     }
 }
 
