@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'olympic_games',
         'USER': os.environ.get('TEXNOPROM_DB_LOGIN'),
-        'PASSWORD': '20101995',
-        'HOST': 'localhost',
+        'PASSWORD': os.environ.get('TEXNOPROM_DB_PASSWORD'),
+        'HOST': os.environ.get('TEXNOPROM_DB_HOST'),
     }
 }
 
