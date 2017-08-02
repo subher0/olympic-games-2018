@@ -1,0 +1,78 @@
+{% load compress %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Poiret+One">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Old+Standard+TT">
+    {% block title %}
+        <title>Main</title>
+    {% endblock title %}
+    {% compress css %}
+        <link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/general.css" rel="stylesheet">
+    {% endcompress %}
+</head>
+<body>
+
+<!--General container-->
+<div>
+    <!--Longass navbar-->
+    <div class="navbar navbar-default navbar-inverse">
+    </div><!--first offset-->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand my-color" href="/">OLYMP-2018</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            {% block nav-main %}
+                                <li><a href="/">Главная<span class="sr-only"></span></a></li>
+                            {% endblock nav-main %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Longass navbar-->
+
+<!--Filling-->
+{% block content %}
+{% endblock content %}
+<hr>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div>
+                    Телефон
+                </div>
+                <div>
+                    Адрес
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--/General container-->
+
+<h1></h1>
+{% compress js %}
+    <script src="/third_party/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/third_party/bootstrap/js/bootstrap.min.js" type="text/javascript`"></script>
+{% endcompress %}
+</body>
+</html>
