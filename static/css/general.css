@@ -1,3 +1,27 @@
 body {
+    background-color: var(--common-background-color);
+    color: var(--common-font-color);
     font-family: 'Open Sans', sans-serif;
 }
+/*** FOOTER STYLING ***/
+.footer {
+    background-color: var(--dark-background-color);
+    border-top: 3px solid var(--dark-font-color);
+    color: var(--dark-font-color);
+    font-size: 16pt;
+}
+
+.footer__container {
+    width: 85%;
+}
+/*## FOOTER STYLING ##*/
+
+/*** NAVBAR STYLING ***/
+.navbar-nav, .navbar-nav>.d-flex {
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--darker-background-color);
+}
+/*## NAVBAR STYLING ##*/

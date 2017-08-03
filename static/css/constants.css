@@ -1,0 +1,12 @@
+:root {
+    --common-font-color: rgba(34, 37, 45, 1);
+    --darker-font-color: rgba(15, 15, 15, 1);
+    --lighter-font-color: rgb(60, 60, 60);
+    --common-background-color: rgba(242, 242, 247, 1);
+    --darker-background-color: rgb(210, 210, 215);
+    --common-design-color: rgba(39, 52, 105, 1);
+    --accent-color: rgba(255, 246, 81, 1);
+    --dark-font-color: rgba(188, 188, 188, 1);
+    --dark-background-color: rgba(60, 60, 60, 1);
+    --dark-design-color: rgba(75, 101, 204, 1);
+}

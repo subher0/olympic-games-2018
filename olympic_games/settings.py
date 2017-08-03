@@ -25,7 +25,7 @@ SECRET_KEY = '*!%la6ogq_=krau1ukfr3s9b4nm4454jb%+zmbw$d$88o*j&41'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['37.204.2.4']
+ALLOWED_HOSTS = ['37.204.2.4', 'olimp05.ru', 'www.olimp05.ru']
 
 
 # Application definition
@@ -126,3 +126,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
+
+COMPRESS_ENABLED = False
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)

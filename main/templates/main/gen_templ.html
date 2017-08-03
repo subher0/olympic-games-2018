@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet"
@@ -14,44 +15,50 @@
         <title>Main</title>
     {% endblock title %}
     {% compress css %}
-        <link href="/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/general.css" rel="stylesheet">
+        <link href="/static/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/general.css" rel="stylesheet">
+        <link href="/static/css/constants.css" rel="stylesheet">
     {% endcompress %}
 </head>
 <body>
-
-<!--General container-->
-<div>
-    <!--Longass navbar-->
-    <div class="navbar navbar-default navbar-inverse">
-    </div><!--first offset-->
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand my-color" href="/">OLYMP-2018</a>
-                    </div>
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            {% block nav-main %}
-                                <li><a href="/">Главная<span class="sr-only"></span></a></li>
-                            {% endblock nav-main %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--Navbar-->
+<nav class="navbar navbar-toggleable-md navbar-light sticky-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarElements" aria-controls="navbarElements" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">OLYMP-2018</a>
+    <div class="collapse navbar-collapse" id="navbarElements">
+        <ul class="navbar-nav mr-auto">
+            {% block nav-main %}
+                <li class="nav-item"><a class="nav-link" href="/">Главная<span class="sr-only"></span></a></li>
+            {% endblock nav-main %}
+            {% block nav-news %}
+                <li class="nav-item"><a class="nav-link" href="/news">Новости<span class="sr-only"></span></a></li>
+            {% endblock nav-news %}
+            {% block nav-projects %}
+                <li class="nav-item"><a class="nav-link" href="/projects">Проекты<span class="sr-only"></span></a></li>
+            {% endblock nav-projects %}
+            {% block nav-olymp %}
+                <li class="nav-item"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
+            {% endblock nav-olymp %}
+            {% block nav-about %}
+                <li class="nav-item"><a class="nav-link" href="/">О нас<span class="sr-only"></span></a></li>
+            {% endblock nav-about %}
+            {% block nav-contacts %}
+                <li class="nav-item"><a class="nav-link" href="/">Контакты<span class="sr-only"></span></a></li>
+            {% endblock nav-contacts %}
+        </ul>
     </div>
-</div>
-<!--/Longass navbar-->
-
-<!--Filling-->
+</nav>
+<!--/Navbar-->
+<!--Content-->
 {% block content %}
 {% endblock content %}
-<hr>
+<!--Content-->
 <footer class="footer">
-    <div class="container">
+    <div class="container footer__container">
         <div class="row">
             <div class="col-lg-4">
                 <div>
@@ -61,7 +68,10 @@
                     Адрес
                 </div>
                 <div>
-
+                    Email
+                </div>
+                <div>
+                    Ссылки на сети
                 </div>
             </div>
         </div>
@@ -71,8 +81,8 @@
 
 <h1></h1>
 {% compress js %}
-    <script src="/third_party/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="/third_party/bootstrap/js/bootstrap.min.js" type="text/javascript`"></script>
+    <script src="/static/third_party/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/static/third_party/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 {% endcompress %}
 </body>
 </html>
