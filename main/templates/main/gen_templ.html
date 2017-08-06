@@ -17,8 +17,11 @@
     {% compress css %}
         <link href="/static/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="/static/css/general.css" rel="stylesheet">
+        {% block styles %}
+        {% endblock styles %}
         <link href="/static/css/constants.css" rel="stylesheet">
         <link href="/static/css/news.css" rel="stylesheet">
+        <link href="/static/css/contacts.css" rel="stylesheet">
     {% endcompress %}
 </head>
 <body>
@@ -42,18 +45,48 @@
                 <li class="nav-item"><a class="nav-link" href="/projects">Проекты<span class="sr-only"></span></a></li>
             {% endblock nav-projects %}
             {% block nav-olymp %}
-                <li class="nav-item"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a>
+                </li>
             {% endblock nav-olymp %}
             {% block nav-about %}
-                <li class="nav-item"><a class="nav-link" href="/">О нас<span class="sr-only"></span></a></li>
             {% endblock nav-about %}
             {% block nav-contacts %}
-                <li class="nav-item"><a class="nav-link" href="/">Контакты<span class="sr-only"></span></a></li>
+                <li class="nav-item"><a class="nav-link" href="/contacts">Контакты<span
+                        class="sr-only"></span></a></li>
             {% endblock nav-contacts %}
         </ul>
     </div>
 </nav>
 <!--/Navbar-->
+<div id="contacts" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Контакты</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Адрес:
+                        </div>
+                        <div class="col-lg-8">
+                            Героиновая улица 228
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Телефон:
+                        </div>
+                        <div class="col-lg-8">
+                            8-988-888-88-81
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--Content-->
 {% block content %}
 {% endblock content %}
@@ -79,11 +112,13 @@
     </div>
 </footer>
 <!--/General container-->
-
-<h1></h1>
 {% compress js %}
     <script src="/static/third_party/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/static/third_party/tether.js" type="text/javascript"></script>
     <script src="/static/third_party/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/static/js/general.js" type="text/javascript"></script>
+    {% block scripts %}
+    {% endblock scripts %}
 {% endcompress %}
 </body>
 </html>

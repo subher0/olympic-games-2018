@@ -1,12 +1,85 @@
+/*** CARD ADJUSTMENT ***/
 .card {
-    width: 300px;
+    min-width: 300px;
     display: inline-block;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: 10px 10px 20px 15px;
+    border: solid 2px var(--common-design-color);
+    background-color: var(--common-background-color);
+    box-shadow: 15px 15px 15px -5px #1d1e1f;
+}
+
+.card-image-container {
+    border-bottom: solid 1px var(--common-design-color);
+    position: relative;
+}
+
+.card-fade-in-image {
+    position: absolute;
+    opacity: 0.5;
+    background-color: var(--common-design-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.card-image-container:hover .card-fade-in-image {
+    transform: scale(0);
+}
+
+.card-block .btn {
+    background-color: var(--common-design-color);
+    color: var(--common-background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+    filter: opacity(0.9);
+}
+
+.card-block .btn:hover {
+    box-shadow: 3px 3px 8px var(--common-design-color);
+    filter: opacity(1);
+    color: var(--common-background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
 }
 
 .card-img-top {
     width: 100%;
     height: auto;
 }
+
+/*## CARD ADJUSTMENT ##*/
+/*** MODAL ADJUSTMENT ***/
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-dialog {
+    margin-top: 80px;
+}
+
+.modal-backdrop {
+    background-color: var(--common-design-color);
+}
+
+.modal-content {
+    border: solid 1px var(--common-design-color);
+    border-radius: 10px;
+    background-color: var(--common-background-color);
+    color: var(--common-font-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+.fade {
+    background-color: var(--fade-color);
+}
+
+.modal.fade .modal-dialog {
+    transition: none;
+    transform: none;
+}
+
+/*## MODAL ADJUSTMENT ##*/
+
