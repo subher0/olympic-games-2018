@@ -1,0 +1,217 @@
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+/* OVERALL ASPECT */
+
+body {
+    background-color: #dddddd !important;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #f85c37;
+    word-wrap: break-word;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*TILT*/
+.tilt {
+    transition: all 1s ease;
+}
+
+.tilt:hover {
+    transform: rotate(-10deg);
+}
+
+.headerwrap {
+    background: #719f79;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 240px;
+    width: 100%;
+}
+
+.headerwrap h1 {
+    padding-top: 15px;
+    font-family: "Poiret One", sans-serif;
+    margin-top: 10px;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+.headerwrap p {
+    padding-top: 50px;
+    font-weight: 100;
+    font-family: "Poiret One", sans-serif;
+    color: white;
+    line-height: 25px;
+    font-size: 18.3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Dark Grey Wrap */
+#dg {
+    background: #ededed;
+
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+#dg h4 {
+    font-weight: 700;
+}
+
+/* Light Grey */
+#lg {
+    background: #ededed;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#lg h4 {
+    font-family: 'Poiret One', cursive;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Red Wrap */
+#r {
+    background: #545454;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+#r h4 {
+    font-family: "Poiret One", sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+#r p {
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+/****** SECTIONS *****/
+
+.w {
+    padding-top: 5px;
+}
+
+.w h4 {
+    font-weight: 100;
+}
+
+.w i {
+    color: #ff7878;
+    font-size: 30px;
+}
+
+.wb {
+    padding-top: 35px;
+    margin-bottom: 0;
+}
+
+.wb h4 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.wb p {
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: #4f4f4f;
+}
+
+.button {
+    padding: 12px;
+    width: 200px;
+    height: 50px;
+    border-radius: 3px;
+    border: 2px solid #808080;
+    -webkit-transition: all .3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
+
+}
+
+.button:hover {
+    background: #4a9c5a;
+    color: #000;
+    border: 2px solid #40734a;
+}
+
+.button:hover:before {
+    content: '';
+    top: 8px;
+}
+
+.project-slider {
+    width: 100%;
+}
+
+.slider-img-container {
+    width: 100%;
+    height: auto;
+}
+
+.slick-slide {
+    height: auto;
+}
+
+.slick-dots li button:before {
+    font-size: 20px;
+}

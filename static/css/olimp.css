@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+html {
+  background: #ededed
+}
+
+
+
+body>.headerwrap {
+  background: #719f79;
+}
+
+.headerwrap {
+  background: #719f79;
+  margin-top:  0 auto;
+	padding: 1em;
+	text-align: center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 240px;
+	width: 100%;
+}
+
+h3 {
+  word-wrap: break-word;
+}
+
+.headerwrap h3 {
+  padding-top: 50px;
+  font-family: "Poiret One";
+	color: white;
+	font-size: 3em;
+  font-weight: 100;
+	letter-spacing: 3px;
+}
+
+
+.dg {
+background: #ededed;
+
+	padding-top: 25px;
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+.img-fluid {
+  width: 200px;
+
+}
+
+.dg h1 {
+  font-family: "Poiret One";
+  font-weight: 700;
+}
+
+.dg h4 {
+  color: #000000;
+	font-weight: 500;
+  font-family: "Poiret One";
+}
+
+.btn:focus, .btn-primary:focus {
+  box-shadow: none;
+}
