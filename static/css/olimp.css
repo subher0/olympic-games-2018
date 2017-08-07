@@ -31,7 +31,7 @@ h3 {
 
 .headerwrap h3 {
   padding-top: 50px;
-  font-family: "Poiret One";
+  font-family: "Poiret One", sans-serif;
 	color: white;
 	font-size: 3em;
   font-weight: 100;
@@ -53,14 +53,14 @@ background: #ededed;
 }
 
 .dg h1 {
-  font-family: "Poiret One";
+  font-family: "Poiret One", sans-serif;
   font-weight: 700;
 }
 
 .dg h4 {
   color: #000000;
 	font-weight: 500;
-  font-family: "Poiret One";
+  font-family: "Poiret One", sans-serif;
 }
 
 .btn:focus, .btn-primary:focus {

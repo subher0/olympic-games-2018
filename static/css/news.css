@@ -1,11 +1,14 @@
 /*** CARD ADJUSTMENT ***/
+.card-deck {
+    max-width: 100%;
+}
 .card {
-    min-width: 300px;
     display: inline-block;
     margin: 10px 10px 20px 15px;
     border: solid 2px var(--common-design-color);
     background-color: var(--common-background-color);
-    box-shadow: 15px 15px 15px -5px #1d1e1f;
+    box-shadow: 15px 15px 15px -5px #4b5257;
+    min-width: 30%;
 }
 
 .card-image-container {

@@ -1,13 +1,31 @@
+@font-face {
+    font-family: 'Poiret One';
+    src: url(/static/fonts/Poiret+One.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/static/fonts/Open+Sans.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/static/fonts/Roboto-Thin.ttf);
+}
+
 /*** FOOTER STYLING ***/
 .footer {
     background-color: var(--dark-background-color);
     border-top: 3px solid var(--dark-font-color);
     color: var(--dark-font-color);
     font-size: 16pt;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
 
 .footer__container {
     width: 85%;
+    padding-bottom: 15px;
 }
 
 /*## FOOTER STYLING ##*/
@@ -34,6 +52,13 @@
     z-index: 100000;
 }
 
+.navbar-toggler {
+    margin-top: 14px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
 /*## NAVBAR STYLING ##*/
 /*****************************************************************************************************/
 /*** GENERAL STYLINGS ***/
@@ -88,7 +113,7 @@ h4, h5, h6 {
 }
 
 @media screen and (min-resolution: 150dpi) and (max-resolution: 250dpi) {
-     h1 {
+    h1 {
         font-size: 3em;
     }
 
@@ -141,12 +166,84 @@ h4, h5, h6 {
 
 /*## RESPONSIVENESS FOR TYPOGRAPHY ##*/
 /*****************************************************************************************************/
+/*** ICONS ***/
+.phone-icon {
+    background: url("/static/icons/phone.svg");
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.logo-icon {
+    background: url("/static/icons/logo.svg") no-repeat;
+    width: 70px;
+    height: 70px;
+    margin-top: -2px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.location-icon {
+    background: url("/static/icons/phone.svg");
+}
+
+.fa-mobile, .fa-envelope, .fa-map-marker {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+.fa {
+    margin-bottom: 2px;
+}
+
+.fa-vk {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: var(--dark-font-color);
+}
+
+.fa-vk:hover {
+    color: #4c75a3;
+}
+
+.fa-instagram {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: var(--dark-font-color);
+}
+
+.fa-instagram:hover {
+    color: #e0942a;
+}
+
+.fa-twitter {
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: var(--dark-font-color);
+}
+
+.fa-twitter:hover {
+    color: #5ea9dd;
+}
+
+.fa-twitter, .fa-vk, .fa-instagram {
+    transition: all 0.5s;
+}
+
+/*## ICONS ##*/
+/*****************************************************************************************************/
 /*** OTHER ***/
 body {
     background-color: var(--common-background-color);
     color: var(--common-font-color);
     font-family: 'Open Sans', sans-serif;
     padding-right: 0 !important;
+}
+
+.info-container {
+    position: relative;
+    margin-top: 10px;
 }
 
 /*## OTHER ##*/

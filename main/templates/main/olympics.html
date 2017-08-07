@@ -1,5 +1,123 @@
 {% extends "main/gen_templ.html" %}
 
 {% block nav-olymp %}
-     <li class="nav-item active"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
+    <li class="nav-item active"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
 {% endblock nav-olymp %}
+
+{% block scripts %}
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="/static/js/index.js"></script>
+{% endblock scripts %}
+
+{% block styles %}
+    <link href="/static/css/olimp.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+    <div class="headerwrap">
+        <div class="container">
+            <div class="row centered">
+                <div class="col-lg-8 offset-lg-2">
+                    <h3>Олимпиады</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="dg">
+        <div class="container-fluid">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#hide"><img class="img-fluid"
+                                                                                         src="/static/img/logo.png" alt="">
+            </button>
+            <div class="collapse" id="hide">
+                <div class="row centered olimp-highlight">
+                    <br>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-9 align-self-center">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
+                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
+                            modi sequi recusandae possimus! Dolores, accusantium!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <br>
+            <h1>ВУЗовская</h1>
+            <br>
+
+            <button class="btn btn-link" data-toggle="collapse" data-target="#hide1"><img class="img-fluid"
+                                                                                          src="/static/img/logo.png" alt="">
+            </button>
+            <div class="collapse" id="hide1">
+                <div class="row centered olimp-highlight">
+                    <br>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-9 align-self-center">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
+                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
+                            modi sequi recusandae possimus! Dolores, accusantium!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <button class="btn btn-link" data-toggle="collapse" data-target="#hide2"><img class="img-fluid"
+                                                                                          src="/static/img/logo.png" alt="">
+            </button>
+            <div class="collapse" id="hide2">
+                <div class="row centered olimp-highlight">
+                    <br>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-9 align-self-center">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
+                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
+                            modi sequi recusandae possimus! Dolores, accusantium!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <button class="btn btn-link" data-toggle="collapse" data-target="#hide3"><img class="img-fluid"
+                                                                                          src="/static/img/logo.png" alt="">
+            </button>
+            <div class="collapse" id="hide3">
+                <div class="row centered olimp-highlight">
+                    <br>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-9 align-self-center">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
+                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
+                            modi sequi recusandae possimus! Dolores, accusantium!</h4>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <button class="btn btn-link" data-toggle="collapse" data-target="#hide4"><img class="img-fluid"
+                                                                                          src="/static/img/logo.png" alt="">
+            </button>
+            <div class="collapse" id="hide4">
+                <div class="row centered olimp-highlight">
+                    <br>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-9 align-self-center">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
+                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
+                            modi sequi recusandae possimus! Dolores, accusantium!</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
