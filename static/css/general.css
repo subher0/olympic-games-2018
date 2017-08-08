@@ -16,7 +16,7 @@
 /*** FOOTER STYLING ***/
 .footer {
     background-color: var(--dark-background-color);
-    border-top: 3px solid var(--dark-font-color);
+    border-top: 1px solid var(--dark-font-color);
     color: var(--dark-font-color);
     font-size: 16pt;
     font-family: "Roboto", sans-serif;
@@ -33,12 +33,32 @@
 /*** NAVBAR STYLING ***/
 .navbar-nav, .navbar-nav > .d-flex {
     width: 100%;
+    margin-top: 20px;
 }
 
 .nav-item {
     padding: 0 10px 0 10px;
     font-family: 'Poiret One', sans-serif;
     font-size: 2em;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-item:hover {
+    height: 54px;
+    background-color: var(--design-color);
+    border-radius: 5px 5px 0 0;
+}
+
+.navbar-light .navbar-nav .nav-item:hover .nav-link,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+    color: var(--dark-font-color);
+}
+
+.nav-item.active {
+    position: relative;
+    height: 54px;
+    background-color: var(--design-color);
+    border-radius: 5px 5px 0 0;
 }
 
 .nav-link {
@@ -47,9 +67,14 @@
     cursor: pointer;
 }
 
+.navbar-light .navbar-nav .active>.nav-link {
+    color: var(--design-color);
+}
+
 .navbar {
-    background-color: var(--darker-background-color);
+    background-color: var(--background-color-d1);
     z-index: 100000;
+    padding: 5px 0 0 5px;
 }
 
 .navbar-toggler {
@@ -179,8 +204,8 @@ h4, h5, h6 {
     background: url("/static/icons/logo.svg") no-repeat;
     width: 70px;
     height: 70px;
-    margin-top: -2px;
     margin-right: 8px;
+    margin-bottom: 5px;
     display: inline-block;
 }
 
@@ -198,7 +223,7 @@ h4, h5, h6 {
 }
 
 .fa-vk {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 2.5em;
     color: var(--dark-font-color);
 }
@@ -208,7 +233,7 @@ h4, h5, h6 {
 }
 
 .fa-instagram {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 2.5em;
     color: var(--dark-font-color);
 }
@@ -218,7 +243,7 @@ h4, h5, h6 {
 }
 
 .fa-twitter {
-    margin-top: 20px;
+    margin-top: 0;
     font-size: 2.5em;
     color: var(--dark-font-color);
 }
@@ -235,8 +260,8 @@ h4, h5, h6 {
 /*****************************************************************************************************/
 /*** OTHER ***/
 body {
-    background-color: var(--common-background-color);
-    color: var(--common-font-color);
+    background-color: var(--background-color);
+    color: var(--font-color);
     font-family: 'Open Sans', sans-serif;
     padding-right: 0 !important;
 }

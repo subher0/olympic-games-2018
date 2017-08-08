@@ -12,11 +12,10 @@
     {% compress css %}
         <link href="/static/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="/static/third_party/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        {% block styles %}
-        {% endblock styles %}
         <link href="/static/css/general.css" rel="stylesheet">
         <link href="/static/css/constants.css" rel="stylesheet">
-        <link href="/static/css/contacts.css" rel="stylesheet">
+        {% block styles %}
+        {% endblock styles %}
     {% endcompress %}
 </head>
 <body>
@@ -41,6 +40,8 @@
                 </li>
             {% endblock nav-olymp %}
             {% block nav-about %}
+                <li class="nav-item"><a class="nav-link" href="https://www.leon.ru/">О нас<span class="sr-only"></span></a>
+                </li>
             {% endblock nav-about %}
             {% block nav-contacts %}
                 <li class="nav-item"><a class="nav-link" href="/contacts">Контакты<span
@@ -68,12 +69,10 @@
                     <span class="fa fa-envelope"></span>kama@pul.ya
                 </div>
             </div>
-            <div class="col-lg-4 offset-lg-4">
-                <div class="social-link d-flex justify-content-between">
-                    <a href="http://vk.com"><span class="fa fa-vk"></span></a>
-                    <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
-                    <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
-                </div>
+            <div class="col-lg-4 offset-lg-4 d-flex align-items-end justify-content-between">
+                <a href="http://vk.com"><span class="fa fa-vk"></span></a>
+                <a href="http://instagram.com"><span class="fa fa-instagram"></span></a>
+                <a href="http://twitter.com"><span class="fa fa-twitter"></span></a>
             </div>
         </div>
     </div>

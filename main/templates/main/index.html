@@ -4,10 +4,6 @@
     <li class="nav-item active"><a class="nav-link" href="/">Главная<span class="sr-only"></span></a></li>
 {% endblock nav-main %}
 
-{% block nav-about %}
-    <li class="nav-item"><a class="nav-link" href="/">О нас<span class="sr-only"></span></a></li>
-{% endblock nav-about %}
-
 {% block scripts %}
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="/static/js/index.js"></script>
@@ -16,11 +12,10 @@
 {% block styles %}
     <link href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick-theme.css+slick.css)" rel="stylesheet">
     <link href="/static/css/main.css" rel="stylesheet">
-    <link href="/static/css/project.css" rel="stylesheet">
 {% endblock styles %}
 
 {% block content %}
-    <div class="headerwrap">
+    <div class="header-section">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-8 offset-lg-2">
@@ -34,7 +29,7 @@
     </div>
 
 
-    <div id="dg">
+    <div id="project-section">
         <div class="container-fluid">
             <div class="prj-bg">
                 <div class="row">
@@ -100,7 +95,7 @@
         </div>
     </div>
 
-    <div class="container-fluid wb">
+    <div class="container-fluid text-section">
         <div class="row centered">
             <br><br>
             <div class="col-lg-8 offset-lg-2">
@@ -122,7 +117,7 @@
     </div>
 
 
-    <div id="lg">
+    <div id="partners-section">
         <div class="container">
             <div class="row centered">
                 <div class="project-slider">
@@ -137,7 +132,7 @@
     </div>
 
 
-    <div id="r">
+    <div class="tagline">
         <div class="container">
             <div class="row centered">
                 <div class="col-lg-8 offset-lg-2">

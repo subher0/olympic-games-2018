@@ -1,35 +1,34 @@
 {% extends "main/gen_templ.html" %}
 
+{% block styles %}
+    <link href="/static/css/contacts.css" rel="stylesheet">
+{% endblock styles %}
 {% block nav-contacts %}
     <li class="nav-item active"><a class="nav-link" href="/">Контакты<span class="sr-only"></span></a></li>
 {% endblock nav-contacts %}
+{% block scripts %}
+    <script src="/static/js/contacts.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoWuQkEnKFD38uoNRjwQQnJ7nAasWG8oY&callback=initMap&language=ru&region=RU">
+    </script>
+{% endblock scripts %}
 
 {% block content %}
     <div class="container-fluid">
         <div class="header">
             <h2>Наши контакты</h2>
         </div>
-        <div class="row">
+        <div class="row contact-background">
             <div class="col-lg-5">
                 <div class="contact-info">
-                    <div class="header">
-                        <h1>Контакты</h1>
+                    <div class="info-container header">
+                        <span class="fa fa-mobile"></span>8-(988)-888-88-88
                     </div>
-                    <div class="row">
-                        <div class="col-4 offset-1">
-                            <h4>Адрес</h4>
-                        </div>
-                        <div class="col-7">
-                            <h4>37.204.2.4</h4>
-                        </div>
+                    <div class="info-container header">
+                        <span class="fa fa-map-marker"></span>Улица Сезам, дом 1
                     </div>
-                    <div class="row">
-                        <div class="col-4 offset-1">
-                            <h4>Телефон</h4>
-                        </div>
-                        <div class="col-7">
-                            <h4>8-(988)-888-88-88</h4>
-                        </div>
+                    <div class="info-container header">
+                        <span class="fa fa-envelope"></span>kama@pul.ya
                     </div>
                 </div>
             </div>
@@ -41,10 +40,3 @@
         </div>
     </div>
 {% endblock content %}
-
-{% block scripts %}
-    <script src="/static/js/contacts.js"></script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoWuQkEnKFD38uoNRjwQQnJ7nAasWG8oY&callback=initMap&language=ru&region=RU">
-    </script>
-{% endblock scripts %}

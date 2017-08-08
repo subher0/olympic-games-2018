@@ -1,11 +1,25 @@
 :root {
-    --common-font-color: #22252d;
-    --darker-font-color: #0F0F0F;
-    --lighter-font-color: #3C3C3C;
-    --common-background-color: #F2F2F7;
-    --darker-background-color: #e6e6eb;
-    --common-design-color: #273469;
+    --font-color-d1: #121319;
+    --font-color: #22252d;
+    --font-color-l1: #363a41;
+
+    --background-color: #F2F2F7;
+    --background-color-d1: #dedee3;
+    --background-color-d2: #cacacf;
+    --background-color-d3: #b6b6bb;
+    --background-color-d4: #a2a2a7;
+    --background-color-d5: #8e8e93;
+    --background-color-d6: #7a7a7f;
+
+    --design-color-d2: #1e1f41;
+    --design-color-d1: #222755;
+    --design-color: #273469;
+    --design-color-l1: #2e3c7d;
+    --design-color-l2: #323e91;
+    --design-color-l3: #3b4ca5;
+
     --accent-color: #FFF651;
+
     --dark-font-color: #BCBCBC;
     --dark-background-color: #242424;
     --dark-design-color: #4B65CC;

@@ -1,19 +1,9 @@
-/* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700,900);
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-
-/* OVERALL ASPECT */
-
 body {
-    background-color: #dddddd !important;
+    background-color: #dddddd;
     font-family: "Poiret One", sans-serif;
     font-weight: 100;
     font-size: 16px;
-    color: #555;
-
+    color: var(--font-color);
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -23,54 +13,17 @@ body {
 }
 
 /* Links */
-a {
-    color: #f85c37;
-    word-wrap: break-word;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
-a:hover,
-a:focus {
-    color: #7b7b7b;
-    text-decoration: none;
-    outline: 0;
-}
-
-a:before,
-a:after {
-    transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*TILT*/
-.tilt {
-    transition: all 1s ease;
-}
-
-.tilt:hover {
-    transform: rotate(-10deg);
-}
-
-.headerwrap {
-    background: #719f79;
+.header-section {
+    background: var(--design-color);
     margin: 0 auto;
     padding: 2em;
     text-align: center;
-    background-attachment: relative;
     background-position: center center;
     min-height: 240px;
     width: 100%;
 }
 
-.headerwrap h1 {
+.header-section h1 {
     padding-top: 15px;
     font-family: "Poiret One", sans-serif;
     margin-top: 10px;
@@ -79,7 +32,7 @@ hr {
     letter-spacing: 3px;
 }
 
-.headerwrap p {
+.header-section p {
     padding-top: 50px;
     font-weight: 100;
     font-family: "Poiret One", sans-serif;
@@ -91,27 +44,26 @@ hr {
 }
 
 /* Dark Grey Wrap */
-#dg {
-    background: #ededed;
-
+#project-section {
+    background: var(--background-color);
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
 }
 
-#dg h4 {
+#project-section h4 {
     font-weight: 700;
 }
 
 /* Light Grey */
-#lg {
-    background: #ededed;
+#partners-section {
+    background: var(--background-color-d3);
     padding-top: 25px;
     padding-bottom: 30px;
     text-align: center;
 }
 
-#lg h4 {
+#partners-section h4 {
     font-family: 'Poiret One', cursive;
     padding-top: 10px;
     padding-bottom: 25px;
@@ -119,8 +71,8 @@ hr {
 }
 
 /* Red Wrap */
-#r {
-    background: #545454;
+.tagline {
+    background-color: var(--background-color-d4);
     padding-top: 35px;
     padding-bottom: 35px;
 }
@@ -152,18 +104,19 @@ hr {
     font-size: 30px;
 }
 
-.wb {
+.text-section {
     padding-top: 35px;
     margin-bottom: 0;
+    background-color: var(--background-color-d2);
 }
 
-.wb h4 {
+.text-section h4 {
     font-family: "Poiret One", sans-serif;
     font-size: 27px;
     font-weight: 700;
 }
 
-.wb p {
+.text-section p {
     font-family: "Poiret One", sans-serif;
     font-size: 1.3em;
     font-weight: 500;
@@ -186,7 +139,7 @@ a {
     font-family: "Poiret One", sans-serif;
     font-weight: 700;
 
-}
+}wb
 
 .button:hover {
     background: #4a9c5a;
@@ -214,4 +167,57 @@ a {
 
 .slick-dots li button:before {
     font-size: 20px;
+}
+
+html {
+    background: #ededed
+}
+
+.prj-bg {
+    text-align: center;
+}
+
+.prj-bg a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card {
+    padding-top: 5%;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: var(--design-color-l2);
+    min-width: 100px;
+    min-height: 200px;
+}
+
+.button {
+    background: #ffffff;
+}
+
+.cup-icon {
+    background: url("../img/cup.svg");
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.card .prj-overlay {
+    background-color: var(--design-color-l3);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .3s;
+    transform: scale(0);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.card:hover .prj-overlay {
+    border-radius: 11px;
+    transform: scale(1);
+    opacity: 1;
 }

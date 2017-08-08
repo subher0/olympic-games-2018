@@ -10,11 +10,11 @@ html {
 
 
 
-body>.headerwrap {
+body>.header-section {
   background: #719f79;
 }
 
-.headerwrap {
+.header-section {
   background: #719f79;
   margin-top:  0 auto;
 	padding: 1em;
@@ -29,7 +29,7 @@ h3 {
   word-wrap: break-word;
 }
 
-.headerwrap h3 {
+.header-section h3 {
   padding-top: 50px;
   font-family: "Poiret One", sans-serif;
 	color: white;
