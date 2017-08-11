@@ -15,7 +15,7 @@ class News(models.Model):
     date = models.DateTimeField(verbose_name='publication date', default=now)
     title = models.TextField(verbose_name='news title')
     text = models.TextField(verbose_name='news text')
-    short_text = models.CharField(verbose_name='news short text', max_length=512, default='No description')
+    short_text = models.TextField(verbose_name='news short text', max_length=512, default='No description')
     image = models.ImageField(verbose_name='news image', default='no_image.jpg', upload_to=make_filepath)
     objects = NewsManager()
 

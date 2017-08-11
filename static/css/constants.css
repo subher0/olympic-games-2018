@@ -11,12 +11,19 @@
     --background-color-d5: #8e8e93;
     --background-color-d6: #7a7a7f;
 
-    --design-color-d2: #1e1f41;
+/*    --design-color-d2: #1e1f41;
     --design-color-d1: #222755;
     --design-color: #273469;
     --design-color-l1: #2e3c7d;
     --design-color-l2: #323e91;
-    --design-color-l3: #3b4ca5;
+    --design-color-l3: #3b4ca5;*/
+
+    --design-color-d2: #313269;
+    --design-color-d1: #2f347d;
+    --design-color: #35449b;
+    --design-color-l1: #3848af;
+    --design-color-l2: #3a48c3;
+    --design-color-l3: #4659d7;
 
     --accent-color: #FFF651;
 

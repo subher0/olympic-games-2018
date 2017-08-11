@@ -37,7 +37,7 @@
 }
 
 .nav-item {
-    padding: 0 10px 0 10px;
+    padding: 6px 10px 0 10px;
     font-family: 'Poiret One', sans-serif;
     font-size: 2em;
     transition: all 0.2s ease-in-out;
@@ -83,6 +83,33 @@
 
 .navbar-brand {
     padding: 0;
+}
+
+.toggler-bar {
+    width: 40px;
+    height: 5px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: var(--font-color-l1);
+    border-radius: 9px;
+    transition: all 0.3s;
+}
+
+button:not(.collapsed) .toggler-bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 7px);
+}
+
+button:not(.collapsed) .toggler-bar:nth-child(2) {
+    opacity: 0;
+}
+
+button:not(.collapsed) .toggler-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -7px)
+}
+
+button:focus {
+    box-shadow: none;
+    outline: none;
 }
 /*## NAVBAR STYLING ##*/
 /*****************************************************************************************************/
@@ -213,12 +240,9 @@ h4, h5, h6 {
     background: url("/static/icons/phone.svg");
 }
 
-.fa-mobile, .fa-envelope, .fa-map-marker {
+.ti {
     margin-right: 8px;
-    font-size: 1.5em;
-}
-
-.fa {
+    font-size: 1em;
     margin-bottom: 2px;
 }
 

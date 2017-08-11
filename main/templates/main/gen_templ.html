@@ -12,6 +12,7 @@
     {% compress css %}
         <link href="/static/third_party/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="/static/third_party/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/static/third_party/themify-icons.css" rel="stylesheet">
         <link href="/static/css/general.css" rel="stylesheet">
         <link href="/static/css/constants.css" rel="stylesheet">
         {% block styles %}
@@ -21,10 +22,12 @@
 <body>
 <!--Navbar-->
 <nav class="navbar navbar-toggleable-md navbar-light sticky-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
             data-target="#navbarElements" aria-controls="navbarElements" aria-expanded="false"
             aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <div class="toggler-bar"></div>
+        <div class="toggler-bar"></div>
+        <div class="toggler-bar"></div>
     </button>
     <a class="navbar-brand" href="/"><span class="logo-icon"></span></a>
     <div class="collapse navbar-collapse" id="navbarElements">
@@ -60,13 +63,13 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="info-container">
-                    <span class="fa fa-mobile"></span>8-(988)-888-88-88
+                    <span class="ti ti-mobile"></span>8-(988)-888-88-88
                 </div>
                 <div class="info-container">
-                    <span class="fa fa-map-marker"></span>Улица Сезам, дом 1
+                    <span class="ti ti-location-pin"></span>Улица Сезам, дом 1
                 </div>
                 <div class="info-container">
-                    <span class="fa fa-envelope"></span>kama@pul.ya
+                    <span class="ti ti-email"></span>kama@pul.ya
                 </div>
             </div>
             <div class="col-lg-4 offset-lg-4 d-flex align-items-end justify-content-between">

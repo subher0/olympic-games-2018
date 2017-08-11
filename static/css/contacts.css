@@ -10,6 +10,10 @@
     z-index: 10000;
 }
 
+.high-container {
+    min-height: 80%;
+}
+
 .contact-info {
     position: relative;
     height: 500px;
