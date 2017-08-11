@@ -33,9 +33,11 @@
         <div class="container-fluid">
             <div class="prj-bg">
                 <div class="row">
+                    {% for project in projects %}
                     <div class="col-lg-3">
+                    <a href="projects/{{ project.id }}">
                         <div class="card">
-                            <h4>Конкурсы</h4>
+                            <h4>{{ project.title }}</h4>
                             <div class="card-block align-text-bottom">
                                 <div class="row">
                                     <div class="cup-icon centered">
@@ -43,53 +45,13 @@
                                 </div>
                             </div>
                             <div class="prj-overlay">
-                                <h3> Описание проекта</h3>
+                                <h3> {{ project.description }}</h3>
                                 <button class="btn button hidden-md-up">Подробнее</button>
                             </div>
                         </div>
+                        </a>
                     </div>
-
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <h4>Конкурсы</h4>
-                            <div class="card-block align-text-bottom">
-                                <div class="row">
-                                    <div class="cup-icon centered">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="prj-overlay">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <h4>Конкурсы</h4>
-                            <div class="card-block align-text-bottom">
-                                <div class="row">
-                                    <div class="cup-icon centered">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="prj-overlay">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <h4>Конкурсы</h4>
-                            <div class="card-block align-text-bottom">
-                                <div class="row">
-                                    <div class="cup-icon centered">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="prj-overlay">
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

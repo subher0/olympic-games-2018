@@ -1,0 +1,14 @@
+body {
+    background-color: var(--design-color) !important;
+}
+
+h1 {
+    color: var(--background-color) !important;
+    text-align: center;
+}
+
+.error-404-wrapper {
+    position: absolute;
+    background: url("/static/icons/404.svg") no-repeat center;
+    height: 600px;
+}

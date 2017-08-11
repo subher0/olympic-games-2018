@@ -1,0 +1,22 @@
+{% extends "main/gen_templ.html" %}
+
+{% block styles %}
+    <link href="/static/css/errors.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Мы не смогли найти указанную страницу</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 error-404-wrapper">
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

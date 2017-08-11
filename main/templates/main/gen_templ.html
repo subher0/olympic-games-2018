@@ -42,8 +42,12 @@
                 <li class="nav-item"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a>
                 </li>
             {% endblock nav-olymp %}
+            {% block nav-projects %}
+                <li class="nav-item"><a class="nav-link" href="/projects">Проекты<span class="sr-only"></span></a>
+                </li>
+            {% endblock nav-projects %}
             {% block nav-about %}
-                <li class="nav-item"><a class="nav-link" href="https://www.leon.ru/">О нас<span class="sr-only"></span></a>
+                <li class="nav-item"><a class="nav-link" href="">О нас<span class="sr-only"></span></a>
                 </li>
             {% endblock nav-about %}
             {% block nav-contacts %}
@@ -58,6 +62,7 @@
 {% block content %}
 {% endblock content %}
 <!--Content-->
+{% block footer %}
 <footer class="footer">
     <div class="container footer__container">
         <div class="row">
@@ -80,6 +85,7 @@
         </div>
     </div>
 </footer>
+{% endblock footer %}
 {% compress js %}
     <script src="/static/third_party/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="/static/third_party/tether.js" type="text/javascript"></script>
