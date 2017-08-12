@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "main/gen_templ.html" %}
 
-</body>
-</html>
+{% block styles %}
+    <link href="/static/css/errors.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Произошло что-то страшное!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 error-500-wrapper">
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

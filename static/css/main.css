@@ -49,6 +49,7 @@ body {
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
+    border-bottom: 1px solid var(--background-color-d3);
 }
 
 #project-section h4 {
@@ -57,7 +58,7 @@ body {
 
 /* Light Grey */
 #partners-section {
-    background: var(--background-color-d3);
+    background: var(--design-color);
     padding-top: 25px;
     padding-bottom: 30px;
     text-align: center;
@@ -72,7 +73,7 @@ body {
 
 /* Red Wrap */
 .tagline {
-    background-color: var(--background-color-d4);
+    background-color: var(--background-color);
     padding-top: 35px;
     padding-bottom: 35px;
 }
@@ -107,7 +108,7 @@ body {
 .text-section {
     padding-top: 35px;
     margin-bottom: 0;
-    background-color: var(--background-color-d2);
+    background-color: var(--background-color);
 }
 
 .text-section h4 {
@@ -139,7 +140,7 @@ a {
     font-family: "Poiret One", sans-serif;
     font-weight: 700;
 
-}wb
+}
 
 .button:hover {
     background: #4a9c5a;
