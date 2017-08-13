@@ -33,32 +33,112 @@
     <div id="project-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class=""></div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card card-top">
-                                asfasf
+                <!-- NEWS CARD -->
+                <div class="col-md-4 col-wo-padding">
+                    <div class="news-card-wrapper">
+                        <div class="news-card">
+                            <div class="news-image"
+                                 style="background: url('/media/{{ news.image }}') center no-repeat; background-size: cover;border-bottom: 1px solid var(--design-color);">
+                            </div>
+                            <div class="news-text">
+                                <h3>{{ news.title }}</h3>
+                                {{ news.short_text }}
+                            </div>
+                            <div class="news-more-button">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news.id }}">Подробнее</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div id="u{{ news.id }}" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">{{ news.title }}</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>{{ news.text }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /NEWS CARD -->
+                <div class="col-md-8 col-wo-padding">
+                    <div class="row row-wo-margin">
+                        <div class="col-lg-12 col-wo-padding">
+                            <div class="icon-card-wrapper">
+                                <div class="icon-card">
+                                    asfasf
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-wo-margin">
                         {% for project in projects %}
-                            <div class="col-lg-6">
+                            <div class="col-md-6 col-wo-padding">
                                 <a href="projects/{{ project.id }}">
-                                    <div class="card">
-                                        <h4>{{ project.title }}</h4>
-                                        <div class="prj-overlay">
-                                            <h3> {{ project.description }}</h3>
-                                            <button class="btn button hidden-md-up">Подробнее</button>
+                                    <div class="icon-card-wrapper">
+                                        <div class="icon-card">
+                                            <h4>{{ project.title }}</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-wo-padding">
+                                <a href="projects/{{ project.id }}">
+                                    <div class="icon-card-wrapper">
+                                        <div class="icon-card">
+                                            <h4>{{ project.title }}</h4>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         {% endfor %}
                     </div>
+                </div>
+            </div>
+            <div class="row hidden-xl-down">
+                <div class="col-md-4 col-wo-padding">
+                    <a href="projects/{{ project.id }}">
+                        <div class="icon-card-wrapper">
+                            <div class="icon-card">
+                                <h4>{{ project.title }}</h4>
+                                <div class="prj-overlay">
+                                    <h3> {{ project.description }}</h3>
+                                    <button class="btn button hidden-md-up">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-wo-padding">
+                    <a href="projects/{{ project.id }}">
+                        <div class="icon-card-wrapper">
+                            <div class="icon-card">
+                                <h4>{{ project.title }}</h4>
+                                <div class="prj-overlay">
+                                    <h3> {{ project.description }}</h3>
+                                    <button class="btn button hidden-md-up">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-wo-padding">
+                    <a href="projects/{{ project.id }}">
+                        <div class="icon-card-wrapper">
+                            <div class="icon-card">
+                                <h4>{{ project.title }}</h4>
+                                <div class="prj-overlay">
+                                    <h3> {{ project.description }}</h3>
+                                    <button class="btn button hidden-md-up">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

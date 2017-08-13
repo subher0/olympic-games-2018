@@ -1,5 +1,5 @@
 body {
-    background-color: #dddddd;
+    background-color: var(--background-color);
     font-family: "Poiret One", sans-serif;
     font-weight: 100;
     font-size: 16px;
@@ -42,15 +42,6 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
-/* Dark Grey Wrap */
-#project-section {
-    background: var(--background-color);
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-bottom: 1px solid var(--background-color-d3);
-}
-
 /* Light Grey */
 #partners-section {
     background: var(--design-color);
@@ -165,21 +156,80 @@ a {
     font-size: 20px;
 }
 
-/*** CARD ADJUSTMENT FOR INDEX ***/
-.card {
-    min-width: 0;
+/*** GRID WITH CARDS ***/
+
+#project-section {
+    z-index: -10;
+    background: rgba(0, 0, 0, 0);
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid var(--background-color-d3);
+    margin-top: -140px;
 }
 
-.full-height {
-    height: 100% !important;
-}
-
-.card-top {
+.news-card-wrapper {
+    font-family: "Roboto", sans-serif;
+    padding: 15px;
+    height: 500px;
     width: 100%;
 }
 
-.card-img-top {
-    width: auto;
-    height: 200px;
+.icon-card-wrapper {
+    font-family: "Roboto", sans-serif;
+    padding: 15px;
+    height: 250px;
+    width: 100%;
 }
-/*## CARD ADJUSTMENT FOR INDEX ##*/
+
+.icon-card {
+    position: relative;
+    padding: 10px;
+    border: 2px solid var(--design-color);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.news-card {
+    position: relative;
+    border: 2px solid var(--design-color);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 10px;
+    margin: 0;
+}
+
+.news-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 220px;
+    width: 100%;
+}
+
+.news-text {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    max-height: 180px;
+    padding: 10px;
+    width: 100%;
+}
+
+.news-text h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.news-more-button {
+    position: absolute;
+    top: 410px;
+    max-height: 60px;
+    right: 10px;
+}
+
+/*## GRID WITH CARDS ##*/

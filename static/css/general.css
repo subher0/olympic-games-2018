@@ -16,7 +16,6 @@
 /*** FOOTER STYLING ***/
 .footer {
     background-color: var(--dark-background-color);
-    border-top: 1px solid var(--dark-font-color);
     color: var(--dark-font-color);
     font-size: 16pt;
     font-family: "Roboto", sans-serif;
@@ -63,7 +62,7 @@ nav .container {
     width: 100%;
 }
 
-.row {
+nav .container .row {
     width: 100%;
 }
 
@@ -154,13 +153,11 @@ button:focus {
 h1, h2, h3 {
     display: table;
     margin: 10px auto;
-    font-family: 'Poiret One', sans-serif;
 }
 
-h4, h5, h6 {
-    font-family: 'Poiret One', sans-serif;
+a, a:hover {
+    text-decoration: none;
 }
-
 /*## GENERAL STYLINGS ##*/
 /*** GENERAL BOOTSTRAP ADJUSTMENTS ***/
 .btn, .btn-primary {
@@ -332,4 +329,11 @@ body {
     margin-top: 10px;
 }
 
+.row-wo-margin {
+    margin: 0;
+}
+
+.col-wo-padding {
+    padding: 0;
+}
 /*## OTHER ##*/

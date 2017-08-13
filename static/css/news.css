@@ -2,12 +2,14 @@
 .card-deck {
     max-width: 100%;
 }
-.card {
+.card,
+.news-card,
+.icon-card {
     display: inline-block;
     margin: 10px 10px 20px 15px;
     border: solid 2px var(--design-color);
     background-color: var(--background-color);
-    box-shadow: 15px 15px 15px -5px #4b5257;
+    box-shadow: 12px 12px 12px -5px #4b5257;
     min-width: 30%;
 }
 
@@ -31,15 +33,17 @@
     transform: scale(0);
 }
 
-.card-block .btn {
+.card-block .btn,
+.news-more-button .btn {
     background-color: var(--design-color);
     color: var(--background-color);
     font-size: 1.1em;
     font-family: "Open Sans", sans-serif;
     filter: opacity(0.9);
+    cursor: pointer;
 }
 
-.card-block .btn:hover {
+.news-more-button .btn:hover {
     box-shadow: 3px 3px 8px var(--design-color);
     filter: opacity(1);
     color: var(--background-color);

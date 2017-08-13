@@ -10,5 +10,6 @@ def index_view(request):
     news = News.objects.getSomeNews(1)
     context = {
         'projects': projects,
+        'news': news[0],
     }
     return HttpResponse(template.render(context, request))
