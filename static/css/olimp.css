@@ -8,21 +8,29 @@ html {
   background: #ededed
 }
 
-
-
-body>.header-section {
-  background: #719f79;
+.header-section {
+    background: url(/static/img/2.jpg) repeat-x;
+    background-size: auto 100%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    background-position: center center;
+    min-height: 240px;
+    width: 100%;
+    position: relative;
 }
 
-.header-section {
-  background: #719f79;
-  margin-top:  0 auto;
-	padding: 1em;
-	text-align: center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 240px;
-	width: 100%;
+.header-overlay {
+  position: absolute;
+  background-color: rgba(98,62,215, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.foreground {
+  z-index: 2;
 }
 
 h3 {
@@ -48,8 +56,7 @@ background: #ededed;
 }
 
 .img-fluid {
-  width: 200px;
-
+  width: 300px;
 }
 
 .dg h1 {
