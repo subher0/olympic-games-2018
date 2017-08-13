@@ -11,6 +11,7 @@
 
 {% block styles %}
     <link href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick-theme.css+slick.css)" rel="stylesheet">
+    <link href="/static/css/news.css" rel="stylesheet">
     <link href="/static/css/main.css" rel="stylesheet">
 {% endblock styles %}
 
@@ -30,28 +31,34 @@
 
 
     <div id="project-section">
-        <div class="container-fluid">
-            <div class="prj-bg">
-                <div class="row">
-                    {% for project in projects %}
-                    <div class="col-lg-3">
-                    <a href="projects/{{ project.id }}">
-                        <div class="card">
-                            <h4>{{ project.title }}</h4>
-                            <div class="card-block align-text-bottom">
-                                <div class="row">
-                                    <div class="cup-icon centered">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="prj-overlay">
-                                <h3> {{ project.description }}</h3>
-                                <button class="btn button hidden-md-up">Подробнее</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class=""></div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card card-top">
+                                asfasf
                             </div>
                         </div>
-                        </a>
                     </div>
-                    {% endfor %}
+                    <div class="row">
+                        {% for project in projects %}
+                            <div class="col-lg-6">
+                                <a href="projects/{{ project.id }}">
+                                    <div class="card">
+                                        <h4>{{ project.title }}</h4>
+                                        <div class="prj-overlay">
+                                            <h3> {{ project.description }}</h3>
+                                            <button class="btn button hidden-md-up">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

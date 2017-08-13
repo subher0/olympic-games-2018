@@ -11,6 +11,14 @@ class NewsManager(models.Manager):
             result = None
         return result
 
+    def getSomeNews(self, amount):
+        try:
+            result = self.order_by('date').reverse()[:amount]
+        except Exception:
+            result = None
+        return result
+
+
 class News(models.Model):
     date = models.DateTimeField(verbose_name='publication date', default=now)
     title = models.TextField(verbose_name='news title')
