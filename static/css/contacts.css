@@ -3,7 +3,7 @@
     height: 500px;
     background-color: grey;
     margin-bottom: 20px;
-    box-shadow: 15px 15px 15px -5px #1d1e1f;
+    box-shadow: 9px 9px 9px -6px #1d1e1f;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid var(--font-color);
@@ -19,7 +19,7 @@
     height: 500px;
     width: 100%;
     background-color: var(--background-color);
-    box-shadow: 15px 15px 15px -5px #1d1e1f;
+    box-shadow: 9px 9px 9px -6px #1d1e1f;
     margin-bottom: 20px;
     border-radius: 10px;
     font-size: 1.5em;
@@ -29,11 +29,13 @@
 }
 
 .header h2 {
-    color: var(--dark-font-color);
+    color: var(-font-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 body {
-    background-color: var(--design-color-l2);
+    background-color: var(--background-color);
 }
 
 .contact-info:hover .contact-overlay {
