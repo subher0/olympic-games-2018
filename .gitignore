@@ -55,3 +55,5 @@ fabric.properties
 *.log
 *.pot
 media
+#OTHERS
+*.orig
