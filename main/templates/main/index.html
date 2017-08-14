@@ -11,7 +11,6 @@
 
 {% block styles %}
     <link href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick-theme.css+slick.css)" rel="stylesheet">
-    <link href="/static/css/news.css" rel="stylesheet">
     <link href="/static/css/main.css" rel="stylesheet">
 {% endblock styles %}
 
@@ -46,7 +45,9 @@
                                 {{ news.short_text }}
                             </div>
                             <div class="news-more-button">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news.id }}">Подробнее</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news.id }}">
+                                    Подробнее
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -71,28 +72,24 @@
                     <div class="row row-wo-margin">
                         <div class="col-lg-12 col-wo-padding">
                             <div class="icon-card-wrapper">
-                                <div class="icon-card">
-                                    asfasf
-                                </div>
+                                <a href="/olympics">
+                                    <div class="icon-card">
+                                        <h2>Олимпиада</h2>
+                                        <div class="olympics-icon"></div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="row row-wo-margin">
-                        {% for project in projects %}
+                        {% for tile in topTiles %}
                             <div class="col-md-6 col-wo-padding">
-                                <a href="projects/{{ project.id }}">
+                                <a href="{{ tile.link }}">
                                     <div class="icon-card-wrapper">
                                         <div class="icon-card">
-                                            <h4>{{ project.title }}</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-wo-padding">
-                                <a href="projects/{{ project.id }}">
-                                    <div class="icon-card-wrapper">
-                                        <div class="icon-card">
-                                            <h4>{{ project.title }}</h4>
+                                            <h2>{{ tile.title }}</h2>
+                                            <div class="icon-card-icon" style="background-image: url('/media/{{ tile.icon }}');">
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -101,46 +98,20 @@
                     </div>
                 </div>
             </div>
-            <div class="row hidden-xl-down">
+            <div class="row">
+                {% for tile in tiles %}
                 <div class="col-md-4 col-wo-padding">
-                    <a href="projects/{{ project.id }}">
+                    <a href="{{ tile.link }}">
                         <div class="icon-card-wrapper">
                             <div class="icon-card">
-                                <h4>{{ project.title }}</h4>
-                                <div class="prj-overlay">
-                                    <h3> {{ project.description }}</h3>
-                                    <button class="btn button hidden-md-up">Подробнее</button>
+                                <h2>{{ tile.title }}</h2>
+                                <div class="icon-card-icon" style="background-image: url('/media/{{ tile.icon }}');">
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 col-wo-padding">
-                    <a href="projects/{{ project.id }}">
-                        <div class="icon-card-wrapper">
-                            <div class="icon-card">
-                                <h4>{{ project.title }}</h4>
-                                <div class="prj-overlay">
-                                    <h3> {{ project.description }}</h3>
-                                    <button class="btn button hidden-md-up">Подробнее</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-wo-padding">
-                    <a href="projects/{{ project.id }}">
-                        <div class="icon-card-wrapper">
-                            <div class="icon-card">
-                                <h4>{{ project.title }}</h4>
-                                <div class="prj-overlay">
-                                    <h3> {{ project.description }}</h3>
-                                    <button class="btn button hidden-md-up">Подробнее</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

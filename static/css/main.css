@@ -46,16 +46,16 @@ body {
 }
 
 .header-overlay {
-  position: absolute;
-  background-color: rgba(98,62,215, 0.6);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+    position: absolute;
+    background-color: rgba(98, 62, 215, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .foreground {
-  z-index: 2;
+    z-index: 2;
 }
 
 /* Dark Grey Wrap */
@@ -181,6 +181,33 @@ a {
 
 /*** GRID WITH CARDS ***/
 
+.news-card,
+.icon-card {
+    display: inline-block;
+    margin: 10px 10px 20px 15px;
+    border: solid 2px var(--design-color);
+    background-color: var(--background-color);
+    box-shadow: 12px 12px 12px -5px #4b5257;
+    min-width: 30%;
+}
+
+.news-more-button .btn {
+    background-color: var(--design-color);
+    color: var(--background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+    filter: opacity(0.9);
+    cursor: pointer;
+}
+
+.news-more-button .btn:hover {
+    box-shadow: 3px 3px 8px var(--design-color);
+    filter: opacity(1);
+    color: var(--background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+}
+
 #project-section {
     z-index: -10;
     background: rgba(0, 0, 0, 0);
@@ -205,6 +232,7 @@ a {
 }
 
 .icon-card {
+    color: var(--font-color);
     position: relative;
     padding: 10px;
     border: 2px solid var(--design-color);
@@ -212,6 +240,15 @@ a {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin: 0;
+    transition: all 0.2s ease-out;
+}
+
+.icon-card:hover {
+    background-color: var(--design-color);
+}
+
+.icon-card h2 {
     margin: 0;
 }
 
@@ -241,6 +278,7 @@ a {
     max-height: 180px;
     padding: 10px;
     width: 100%;
+    overflow: hidden;
 }
 
 .news-text h3 {
@@ -250,9 +288,34 @@ a {
 
 .news-more-button {
     position: absolute;
-    top: 410px;
-    max-height: 60px;
+    top: 420px;
+    max-height: 50px;
     right: 10px;
 }
+
+/*** ICONS ON INDEX ***/
+.olympics-icon {
+    top: 120px;
+    right: 10px;
+    position: absolute;
+    background-image: url("/static/img/olympic-icon.svg");
+    background-size: cover;
+    width: 150px;
+    height: 75px;
+}
+
+.icon-card-icon {
+    top: 120px;
+    right: 10px;
+    position: absolute;
+    background-size: cover;
+    width: 150px;
+    height: 75px;
+}
+
+.icon-card:hover .olympics-icon {
+    background-image: url("/static/img/olympic-icon-inversed.svg");
+}
+/*## ICONS ON INDEX ##*/
 
 /*## GRID WITH CARDS ##*/

@@ -2,9 +2,8 @@
 .card-deck {
     max-width: 100%;
 }
-.card,
-.news-card,
-.icon-card {
+
+.card {
     display: inline-block;
     margin: 10px 10px 20px 15px;
     border: solid 2px var(--design-color);
@@ -33,22 +32,13 @@
     transform: scale(0);
 }
 
-.card-block .btn,
-.news-more-button .btn {
+.card-block .btn {
     background-color: var(--design-color);
     color: var(--background-color);
     font-size: 1.1em;
     font-family: "Open Sans", sans-serif;
     filter: opacity(0.9);
     cursor: pointer;
-}
-
-.news-more-button .btn:hover {
-    box-shadow: 3px 3px 8px var(--design-color);
-    filter: opacity(1);
-    color: var(--background-color);
-    font-size: 1.1em;
-    font-family: "Open Sans", sans-serif;
 }
 
 .card-img-top {
@@ -90,3 +80,38 @@
 
 /*## MODAL ADJUSTMENT ##*/
 
+.header h1 {
+    font-weight: 100;
+    font-family: "Poiret One", sans-serif;
+    color: var(--background-color);
+}
+
+.header-section {
+    background: url(/static/img/2.jpg) repeat-x;
+    background-size: auto 100%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    background-position: center center;
+    min-height: 240px;
+    width: 100%;
+    position: relative;
+}
+
+.header-overlay {
+    position: absolute;
+    background-color: rgba(98, 62, 215, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.foreground {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0;
+}

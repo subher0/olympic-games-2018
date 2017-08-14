@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 from .utils import make_filepath
 
+
 class ArticleManager(models.Manager):
     def getAllArticles(self):
         try:
@@ -10,6 +11,7 @@ class ArticleManager(models.Manager):
         except Exception:
             result = None
         return result
+
 
 class Article(models.Model):
     date = models.DateTimeField(verbose_name='publication date', default=now)

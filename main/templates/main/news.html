@@ -9,10 +9,15 @@
 {% endblock styles %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="header">
-            <h2>Новости</h2>
+    <div class="header-section">
+        <div class="container foreground">
+            <div class="header">
+                <h1>Новости</h1>
+            </div>
         </div>
+        <div class="header-overlay"></div>
+    </div>
+    <div class="container-fluid">
         <div class="card-deck">
             {% for news_item in news %}
                 {% include "main/elements/newsT.html" %}
