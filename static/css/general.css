@@ -46,10 +46,6 @@
     width: 100%;
 }
 
-nav .container {
-    min-width: 250px;
-}
-
 .navbar-collapse ul {
     margin-top: 0;
 }
@@ -86,7 +82,7 @@ nav .container .row {
 }
 
 .navbar-light .navbar-nav .nav-item:hover .nav-link,
-.navbar-light .navbar-nav .nav-item.active .nav-link{
+.navbar-light .navbar-nav .nav-item.active .nav-link {
     color: var(--design-color);
 }
 
@@ -129,6 +125,7 @@ h5.hidden-md-down {
     padding-right: 10px;
     width: 100%;
     text-align: right;
+    font-family: "Roboto", sans-serif;
 }
 
 button:not(.collapsed) .toggler-bar:nth-child(1) {
@@ -147,6 +144,7 @@ button:focus {
     box-shadow: none;
     outline: none;
 }
+
 /*## NAVBAR STYLING ##*/
 /*****************************************************************************************************/
 /*** GENERAL STYLINGS ***/
@@ -155,9 +153,11 @@ h1, h2, h3 {
     margin: 10px auto;
 }
 
-a, a:hover {
+a, a:hover, a:focus {
     text-decoration: none;
+    color: inherit;
 }
+
 /*## GENERAL STYLINGS ##*/
 /*** GENERAL BOOTSTRAP ADJUSTMENTS ***/
 .btn, .btn-primary {
@@ -172,7 +172,33 @@ a, a:hover {
 /*## GENERAL BOOTSTRAP ADJUSTMENTS ##*/
 /*****************************************************************************************************/
 /*** RESPONSIVENESS FOR TYPOGRAPHY ***/
-@media screen and (min-resolution: 250dpi) and (max-resolution: 900dpi) {
+@media screen and (min-width: 1920px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 2.5em;
+    }
+
+    h4 {
+        font-size: 2em;
+    }
+
+    h5 {
+        font-size: 1.5em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
     h1 {
         font-size: 3em;
     }
@@ -198,55 +224,117 @@ a, a:hover {
     }
 }
 
-@media screen and (min-resolution: 150dpi) and (max-resolution: 250dpi) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
     h1 {
         font-size: 3em;
     }
 
     h2 {
-        font-size: 2.5em;
-    }
-
-    h3 {
         font-size: 2em;
     }
 
-    h4 {
+    h3 {
         font-size: 1.5em;
     }
 
-    h5 {
+    h4 {
         font-size: 1em;
     }
 
-    h6 {
+    h5 {
         font-size: 0.75em;
+    }
+
+    h6 {
+        font-size: 0.5em;
     }
 }
 
-@media screen and (max-resolution: 150dpi) {
+@media screen and (min-width: 700px) and (max-width: 1000px) {
     h1 {
-        font-size: 3em;
-    }
-
-    h2 {
         font-size: 2.5em;
     }
 
-    h3 {
-        font-size: 2em;
+    h2 {
+        font-size: 1.75em;
     }
 
-    h4 {
+    h3 {
         font-size: 1.5em;
     }
 
-    h5 {
+    h4 {
         font-size: 1em;
     }
 
-    h6 {
+    h5 {
         font-size: 0.75em;
+    }
+
+    h6 {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 0.8em;
+    }
+
+    h5 {
+        font-size: 0.7em;
+    }
+
+    h6 {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 0.75em;
+    }
+
+    h5 {
+        font-size: 0.5em;
+    }
+
+    h6 {
+        font-size: 0.35em;
+    }
+
+    .container {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
     }
 }
 
@@ -262,7 +350,10 @@ a, a:hover {
 }
 
 .logo-icon {
-    background: url("/static/icons/logo.svg") no-repeat;
+    background-size: cover;
+    background-image: url("/static/icons/logo.png");
+    background-color: #025aa5;
+    border-radius: 1000px;
     width: 60px;
     height: 60px;
     margin-right: 8px;
@@ -336,4 +427,5 @@ body {
 .col-wo-padding {
     padding: 0;
 }
+
 /*## OTHER ##*/

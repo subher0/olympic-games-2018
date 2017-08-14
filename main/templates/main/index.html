@@ -17,8 +17,8 @@
 {% block content %}
     <div class="header-section">
         <div class="container foreground">
-            <div class="row centered">
-                <div class="col-lg-8 offset-lg-2">
+            <div class="row">
+                <div class="col-lg-12">
                     <h1>Машинное Обучение</h1>
                     <p> обширный подраздел искусственного интеллекта, изучающий методы построения алгоритмов, способных
                         обучаться. Различают два типа обучения. Обучение по прецедентам, или индуктивное обучение,
@@ -88,7 +88,8 @@
                                     <div class="icon-card-wrapper">
                                         <div class="icon-card">
                                             <h2>{{ tile.title }}</h2>
-                                            <div class="icon-card-icon" style="background-image: url('/media/{{ tile.icon }}');">
+                                            <div class="icon-card-icon"
+                                                 style="background-image: url('/media/{{ tile.icon }}');">
                                             </div>
                                         </div>
                                     </div>
@@ -100,17 +101,18 @@
             </div>
             <div class="row">
                 {% for tile in tiles %}
-                <div class="col-md-4 col-wo-padding">
-                    <a href="{{ tile.link }}">
-                        <div class="icon-card-wrapper">
-                            <div class="icon-card">
-                                <h2>{{ tile.title }}</h2>
-                                <div class="icon-card-icon" style="background-image: url('/media/{{ tile.icon }}');">
+                    <div class="col-md-4 col-wo-padding">
+                        <a href="{{ tile.link }}">
+                            <div class="icon-card-wrapper">
+                                <div class="icon-card">
+                                    <h2>{{ tile.title }}</h2>
+                                    <div class="icon-card-icon"
+                                         style="background-image: url('/media/{{ tile.icon }}');">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 {% endfor %}
             </div>
         </div>
@@ -142,11 +144,36 @@
         <div class="container">
             <div class="row centered">
                 <div class="project-slider">
-                    <div class="slider-img-container"><img src="/static/img/c01.png" alt="" class="img-fluid"></div>
-                    <div class="slider-img-container"><img src="/static/img/c02.png" alt="" class="img-fluid"></div>
-                    <div class="slider-img-container"><img src="/static/img/c03.png" alt="" class="img-fluid"></div>
-                    <div class="slider-img-container"><img src="/static/img/c04.png" alt="" class="img-fluid"></div>
-                    <div class="slider-img-container"><img src="/static/img/c05.png" alt="" class="img-fluid"></div>
+                    <div class="slider-img-container">
+                        <a href="http://www.dgunh.ru/">
+                            <img src="/static/img/c01.png" alt="" class="img-fluid">
+                            <h3 class="slick-text">Дагестанский Государственный Университет Народного Хозяйства</h3>
+                        </a>
+                    </div>
+                    <div class="slider-img-container">
+                        <a href="http://cpm.dogm.mos.ru/">
+                            <img src="/static/img/c02.png" alt="" class="img-fluid">
+                            <h3 class="slick-text">Центр Педагогического Мастерства</h3>
+                        </a>
+                    </div>
+                    <div class="slider-img-container">
+                        <a href="http://moscowinners.ru/">
+                            <img src="/static/img/c03.png" alt="" class="img-fluid">
+                            <h3 class="slick-text">Московская Ассоциация Победителей Олимпиад</h3>
+                        </a>
+                    </div>
+                    <div class="slider-img-container">
+                        <a href="http://www.dagminobr.ru/">
+                            <img src="/static/img/c04.png" alt="" class="img-fluid">
+                            <h3 class="slick-text">Министерство Образования и Науки Дагестана</h3>
+                        </a>
+                    </div>
+                    <div class="slider-img-container">
+                        <a href="http://centr.dgtu.ru/">
+                            <img src="/static/img/c05.png" alt="" class="img-fluid">
+                            <h3 class="slick-text">Сириус Альтаир</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
