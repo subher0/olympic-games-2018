@@ -7,33 +7,33 @@ $('.project-slider').slick({
     arrows: false
 });
 
-window.onload(() => {
+window.onload = () => {
     let ring4 = document.querySelector('.ring-4');
     let ring5 = document.querySelector('.ring-5');
     let id4 = 0;
     let id5 = 0;
 
-    ring4.addEventListener('mouseout', () => {
+    ring4.addEventListener('mouseleave', () => {
         clearTimeout(id4);
         id4 = setTimeout(() => {
             ring4.setAttribute('style', 'z-index: 0')
         }, 200);
     });
 
-    ring4.addEventListener('mouseenter', () => {
+    ring4.addEventListener('mouseover', () => {
         clearTimeout(id4);
         ring4.setAttribute('style', 'z-index: 1')
     });
 
-    ring5.addEventListener('mouseout', () => {
+    ring5.addEventListener('mouseleave', () => {
         clearTimeout(id5);
         id5 = setTimeout(() => {
             ring5.setAttribute('style', 'z-index: 0')
         }, 200);
     });
 
-    ring5.addEventListener('mouseenter', () => {
+    ring5.addEventListener('mouseover', () => {
         clearTimeout(id5);
         ring5.setAttribute('style', 'z-index: 1');
     });
-});
+};

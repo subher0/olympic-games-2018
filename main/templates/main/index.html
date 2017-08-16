@@ -30,94 +30,84 @@
 
 
     <div id="project-section">
-      <div class="container">
-        <div class="row circle-row">
-          <div class="col-lg-4 col-wo-padding">
-              <div class="olymp-circle-wrapper">
-                  <div class="olymp-circle ring-1">
-                    
-                  </div>
-              </div>
-          </div>
+        <div class="container">
 
-          <div class="col-lg-4 col-wo-padding">
-              <div class="olymp-circle-wrapper"                >
-                  <div class="olymp-circle ring-2">
-
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-lg-4 col-wo-padding">
-              <div class="olymp-circle-wrapper">
-                  <div class="olymp-circle ring-3">
-
-                  </div>
-              </div>
-          </div>
-
+            <div class="row circle-row">
+                {% for project in upperProjects %}
+                    <div class="col-lg-4 col-wo-padding">
+                        <div class="olymp-circle-wrapper">
+                            <a href="/projects/{{ project.id }}">
+                                <div class="olymp-circle {% cycle 'ring-1' 'ring-2' 'ring-3' %}">
+                                    <div class="ring-icon"
+                                         style="background-image: url('/media/{{ project.icon }}')"></div>
+                                    <div class="ring-text">
+                                        <h3>{{ project.title }}</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row circle-row">
+                {% for project in lowerProjects %}
+                    <div class="col-lg-4 {% cycle 'offset-lg-2' '' %} col-wo-padding">
+                        <div class="olymp-circle-wrapper">
+                            <div class="olymp-circle {% cycle 'ring-4' 'ring-5' %}">
+                                <div class="ring-icon"
+                                     style="background-image: url('/media/{{ project.icon }}')"></div>
+                                <div class="ring-text">
+                                    <h3>{{ project.title }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="row circle-row">
-
-          <div class="col-lg-4 offset-lg-2 col-wo-padding">
-              <div class="olymp-circle-wrapper">
-                  <div class="olymp-circle ring-4">
-
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-lg-4 col-wo-padding">
-              <div class="olymp-circle-wrapper">
-                  <div class="olymp-circle ring-5">
-
-                  </div>
-              </div>
-          </div>
-
-        </div>
-      </div>
     </div>
 
     <div class="container-fluid text-section img-section">
         <div class="container">
-        <h1 class="roboto">FOX NEWS</h1>
+            <h1 class="roboto">FOX NEWS</h1>
             <div class="row">
                 {% for news_item in news %}
-                <!-- NEWS CARD -->
-                <div class="col-md-4 col-wo-padding">
-                    <div class="news-card-wrapper">
-                        <div class="news-card">
-                            <div class="news-image"
-                                 style="background: url('/media/{{ news_item.image }}') center no-repeat; background-size: cover;border-bottom: 1px solid var(--design-color);">
-                            </div>
-                            <div class="news-text">
-                                <h3>{{ news_item.title }}</h3>
-                                {{ news_item.text }}
-                            </div>
-                            <div class="news-more-button">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news_item.id }}">
-                                    Подробнее
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="u{{ news_item.id }}" class="modal fade" role="dialog">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2 class="modal-title">{{ news_item.title }}</h2>
+                    <!-- NEWS CARD -->
+                    <div class="col-md-4 col-wo-padding">
+                        <div class="news-card-wrapper">
+                            <div class="news-card">
+                                <div class="news-image"
+                                     style="background: url('/media/{{ news_item.image }}') center no-repeat; background-size: cover;border-bottom: 1px solid var(--design-color);">
                                 </div>
-                                <div class="modal-body">
-                                    <p>{{ news_item.text }}</p>
+                                <div class="news-text">
+                                    <h3>{{ news_item.title }}</h3>
+                                    {{ news_item.text }}
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                <div class="news-more-button">
+                                    <button class="btn btn-primary" data-toggle="modal"
+                                            data-target="#u{{ news_item.id }}">
+                                        Подробнее
+                                    </button>
                                 </div>
                             </div>
                         </div>
+                        <div id="u{{ news_item.id }}" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title">{{ news_item.title }}</h2>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>{{ news_item.text }}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
             </div>
         </div>

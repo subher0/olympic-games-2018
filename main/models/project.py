@@ -6,14 +6,14 @@ from uuid import uuid4
 class ProjectManager(models.Manager):
     def getAllProjects(self):
         try:
-            result = self.order_by('date').reverse()
+            result = self.order_by('date')
         except Exception:
             result = None
         return result
 
     def getSomeProjects(self, amount):
         try:
-            result = self.order_by('date').reverse()[:amount]
+            result = self.order_by('date')[:amount]
         except Exception:
             result = None
         return result
@@ -24,7 +24,7 @@ class Project(models.Model):
     title = models.TextField(verbose_name='project title')
     text = models.TextField(verbose_name='project text')
     description = models.TextField(verbose_name='project description', max_length=256, default='No description')
-    image = models.ImageField(verbose_name='project image', default='no_image.jpg', upload_to=make_filepath)
+    icon = models.FileField(verbose_name='project icon', default='no_icon.svg', upload_to=make_filepath)
     objects = ProjectManager()
 
     def __str__(self):

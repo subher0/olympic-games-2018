@@ -385,10 +385,8 @@ a, a:hover, a:focus {
 }
 
 .logo-icon {
-    background-color: var(--background-color);
     background-image: url("/static/icons/logo.png");
     background-size: cover;
-    border-radius: 1000px;
     display: inline-block;
     height: 80px;
     margin-bottom: 5px;
@@ -464,11 +462,15 @@ a, a:hover, a:focus {
     width: 100%;
 }
 
+.foreground {
+    z-index: 2;
+}
 /*## HEADER WITH BACKGROUND ##*/
 /*****************************************************************************************************/
 /*## HELPER SELECTORS ##*/
 .roboto {
     font-family: "Roboto", sans-serif !important;
+    font-weight: 100;
 }
 /*## HELPER SELECTORS ##*/
 /*****************************************************************************************************/
@@ -478,6 +480,7 @@ body {
     color: var(--font-color);
     font-family: 'Open Sans', sans-serif;
     padding-right: 0 !important;
+    overflow-x: hidden;
 }
 
 .info-container {

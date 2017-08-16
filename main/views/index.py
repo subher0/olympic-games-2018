@@ -1,22 +1,17 @@
 from django.http import HttpResponse
 from django.template import loader
 
-from main.models import IndexTile
 from main.models import Project
 from main.models import News
 
 
 def index_view(request):
     template = loader.get_template('main/index.html')
-    projects = Project.objects.getSomeProjects(4)
+    projects = Project.objects.getSomeProjects(5)
     news = News.objects.getSomeNews(3)
-    tiles = IndexTile.objects.getAllTiles()
-    topTiles = tiles[:2]
-    restTiles = tiles[2:]
     context = {
-        'projects': projects,
+        'upperProjects': projects[:3],
+        'lowerProjects': projects[3:5],
         'news': news,
-        'topTiles': topTiles,
-        'tiles': restTiles,
     }
     return HttpResponse(template.render(context, request))
