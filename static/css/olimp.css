@@ -5,71 +5,49 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
 html {
-  background: #ededed
-}
-
-.header-section {
-    background: url(/static/img/2.jpg) repeat-x;
-    background-size: auto 100%;
-    margin: 0 auto;
-    padding: 2em;
-    text-align: center;
-    background-position: center center;
-    min-height: 240px;
-    width: 100%;
-    position: relative;
-}
-
-.header-overlay {
-  position: absolute;
-  background-color: rgba(98,62,215, 0.6);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+    background: #ededed
 }
 
 .foreground {
-  z-index: 2;
+    z-index: 2;
 }
 
 h3 {
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .header-section h3 {
-  padding-top: 50px;
-  font-family: "Poiret One", sans-serif;
-	color: white;
-	font-size: 3em;
-  font-weight: 100;
-	letter-spacing: 3px;
+    padding-top: 50px;
+    font-family: "Poiret One", sans-serif;
+    color: white;
+    font-size: 3em;
+    font-weight: 100;
+    letter-spacing: 3px;
 }
 
-
 .dg {
-background: #ededed;
+    background: #ededed;
 
-	padding-top: 25px;
-	padding-bottom: 70px;
-	text-align: center;
+    padding-top: 25px;
+    padding-bottom: 70px;
+    text-align: center;
 }
 
 .img-fluid {
-  width: 300px;
+    width: 300px;
 }
 
 .dg h1 {
-  font-family: "Poiret One", sans-serif;
-  font-weight: 700;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 700;
 }
 
 .dg h4 {
-  color: #000000;
-	font-weight: 500;
-  font-family: "Poiret One", sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poiret One", sans-serif;
 }
 
 .btn:focus, .btn-primary:focus {
-  box-shadow: none;
+    box-shadow: none;
 }

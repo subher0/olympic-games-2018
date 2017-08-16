@@ -11,7 +11,7 @@
 
 {% block styles %}
     <link href="https://cdn.jsdelivr.net/g/jquery.slick@1.6.0(slick-theme.css+slick.css)" rel="stylesheet">
-    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
 {% endblock styles %}
 
 {% block content %}
@@ -88,8 +88,11 @@
                                     <div class="icon-card-wrapper">
                                         <div class="icon-card">
                                             <h2>{{ tile.title }}</h2>
-                                            <div class="icon-card-icon"
+                                            <div class="icon-card-icon hover-off"
                                                  style="background-image: url('/media/{{ tile.icon }}');">
+                                            </div>
+                                            <div class="icon-card-icon hover-on"
+                                                 style="background-image: url('/media/{{ tile.iconOnHover }}');">
                                             </div>
                                         </div>
                                     </div>
@@ -106,8 +109,11 @@
                             <div class="icon-card-wrapper">
                                 <div class="icon-card">
                                     <h2>{{ tile.title }}</h2>
-                                    <div class="icon-card-icon"
+                                    <div class="icon-card-icon hover-off"
                                          style="background-image: url('/media/{{ tile.icon }}');">
+                                    </div>
+                                    <div class="icon-card-icon hover-on"
+                                         style="background-image: url('/media/{{ tile.iconOnHover }}');">
                                     </div>
                                 </div>
                             </div>
@@ -147,31 +153,31 @@
                     <div class="slider-img-container">
                         <a href="http://www.dgunh.ru/">
                             <img src="/static/img/c01.png" alt="" class="img-fluid">
-                            <h3 class="slick-text">Дагестанский Государственный Университет Народного Хозяйства</h3>
+                            <h4 class="slick-text">Дагестанский Государственный Университет Народного Хозяйства</h4>
                         </a>
                     </div>
                     <div class="slider-img-container">
                         <a href="http://cpm.dogm.mos.ru/">
                             <img src="/static/img/c02.png" alt="" class="img-fluid">
-                            <h3 class="slick-text">Центр Педагогического Мастерства</h3>
+                            <h4 class="slick-text">Центр Педагогического Мастерства</h4>
                         </a>
                     </div>
                     <div class="slider-img-container">
                         <a href="http://moscowinners.ru/">
                             <img src="/static/img/c03.png" alt="" class="img-fluid">
-                            <h3 class="slick-text">Московская Ассоциация Победителей Олимпиад</h3>
+                            <h4 class="slick-text">Московская Ассоциация Победителей Олимпиад</h4>
                         </a>
                     </div>
                     <div class="slider-img-container">
                         <a href="http://www.dagminobr.ru/">
                             <img src="/static/img/c04.png" alt="" class="img-fluid">
-                            <h3 class="slick-text">Министерство Образования и Науки Дагестана</h3>
+                            <h4 class="slick-text">Министерство Образования и Науки Дагестана</h4>
                         </a>
                     </div>
                     <div class="slider-img-container">
                         <a href="http://centr.dgtu.ru/">
                             <img src="/static/img/c05.png" alt="" class="img-fluid">
-                            <h3 class="slick-text">Сириус Альтаир</h3>
+                            <h4 class="slick-text">Сириус Альтаир</h4>
                         </a>
                     </div>
                 </div>
