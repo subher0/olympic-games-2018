@@ -44,7 +44,7 @@ body {
 #project-section {
     background: var(--background-color);
     border-bottom: 1px solid var(--background-color-d3);
-    padding-bottom: 70px;
+    padding-bottom: 230px;
     padding-top: 70px;
 }
 
@@ -174,6 +174,7 @@ a:focus {
 .slider-img-container:hover {
 
 }
+
 /*## SLICK ADJUSTMENTS ##*/
 
 /*** GRID WITH CARDS ***/
@@ -199,8 +200,8 @@ a:focus {
     height: 220px;
     left: 0;
     position: absolute;
-    top: 0;
     width: 100%;
+    top: 0;
 }
 
 .news-text {
@@ -218,7 +219,7 @@ a:focus {
     content: '...';
     top: 160px;
     width: 80%;
-    background: linear-gradient(to right, rgba(0,0,0,0) 0%, var(--background-color-d1) 60%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, var(--background-color-d1) 60%);
     left: 10%;
 }
 
@@ -227,11 +228,50 @@ a:focus {
     width: 100%;
 }
 
+.olymp-circle-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    padding: 0 50px 0 50px;
+}
+
+.circle-row {
+    width: 930px;
+    margin: 0 auto;
+}
+
+.olymp-circle {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 100%;
+    margin: 10px;
+    border-radius: 100%;
+    transition: all 0.4s;
+}
+
+.olymp-circle:hover {
+    border-radius: 5px;
+    background: var(--background-color);
+    z-index: 2;
+}
+
 .news-more-button {
     max-height: 50px;
     position: absolute;
     right: 10px;
     top: 420px;
+}
+
+/*Rings*/
+.ring-1 {
+    border: 5px solid #027CBD;
+    z-index: 1;
+}
+
+.ring-2 {
+    border: 5px solid #231C16;
+    z-index: 1;
 }
 
 .news-more-button .btn {
@@ -243,6 +283,11 @@ a:focus {
     cursor: pointer;
 }
 
+.ring-3 {
+    border: 5px solid #e02121;
+    z-index: 1;
+}
+
 .news-more-button .btn:hover {
     box-shadow: 3px 3px 8px var(--design-color);
     filter: opacity(1);
@@ -251,6 +296,15 @@ a:focus {
     font-family: "Open Sans", sans-serif;
 }
 
+.ring-4 {
+    border: 5px solid #FCC304;
+    z-index: 0;
+}
+
+.ring-5 {
+    border: 5px solid #029348;
+    z-index: 0;
+}
 
 /*** Hover mechanism ***/
 .icon-card .hover-on,
@@ -262,6 +316,7 @@ a:focus {
 .icon-card:hover .hover-on {
     visibility: visible;
 }
+
 /*## Hover mechanism ##*/
 
 /*## GRID WITH CARDS ##*/
@@ -289,4 +344,5 @@ a:focus {
 .icon-card:hover .olympics-icon {
     background-image: url("/static/img/olympic-icon-inversed.svg");
 }
+
 /*## ICONS ON INDEX ##*/
