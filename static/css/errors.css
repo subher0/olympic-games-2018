@@ -8,13 +8,13 @@ h1 {
 }
 
 .error-404-wrapper {
-    position: absolute;
     background: url("/static/icons/404.svg") no-repeat center;
     height: 600px;
+    position: absolute;
 }
 
 .error-500-wrapper {
-    position: absolute;
     background: url("/static/icons/500.svg") no-repeat center;
     height: 600px;
+    position: absolute;
 }

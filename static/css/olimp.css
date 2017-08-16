@@ -17,19 +17,19 @@ h3 {
 }
 
 .header-section h3 {
-    padding-top: 50px;
-    font-family: "Poiret One", sans-serif;
     color: white;
+    font-family: "Poiret One", sans-serif;
     font-size: 3em;
     font-weight: 100;
     letter-spacing: 3px;
+    padding-top: 50px;
 }
 
 .dg {
     background: #ededed;
 
-    padding-top: 25px;
     padding-bottom: 70px;
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -44,8 +44,8 @@ h3 {
 
 .dg h4 {
     color: #000000;
-    font-weight: 500;
     font-family: "Poiret One", sans-serif;
+    font-weight: 500;
 }
 
 .btn:focus, .btn-primary:focus {

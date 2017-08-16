@@ -19,10 +19,9 @@
         <div class="container foreground">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Машинное Обучение</h1>
-                    <p> обширный подраздел искусственного интеллекта, изучающий методы построения алгоритмов, способных
-                        обучаться. Различают два типа обучения. Обучение по прецедентам, или индуктивное обучение,
-                        основано на выявлении закономерностей в эмпирических данных.</p>
+                    <h1>Дагестанская Ассоциация Победителей Олимпиад</h1>
+                    <p> Уникальное объединение представителей талантливой молодёжи, которые помогут школьникам раскрыть
+                        и развить свой талант.</p>
                 </div>
             </div>
         </div>
@@ -51,26 +50,48 @@
     </div>
 
     <div class="container-fluid text-section img-section">
-        <div class="row centered">
-            <br><br>
-            <div class="col-lg-8 offset-lg-2">
-                <h4>Государственные Проблемы Стран</h4>
-                <br>
-                <p>Как правило, именно политическая верхушка страны выступает в сознании населения как исходная причина
-                    неудовлетворительного экономического положения людей, равно как и связанной серии социальных
-                    проблем. Такой основной вывод можно извлечь из результатов
-                    качественного дистанционного исследования Белорусской аналитической мастерскойОбщественное мнение
-                    Беларуси о проекте «Модернизация для Беларуси».</p>
-                <p><br/><br/></p>
+        <div class="container">
+        <h1 class="roboto">FOX NEWS</h1>
+            <div class="row">
+                {% for news_item in news %}
+                <!-- NEWS CARD -->
+                <div class="col-md-4 col-wo-padding">
+                    <div class="news-card-wrapper">
+                        <div class="news-card">
+                            <div class="news-image"
+                                 style="background: url('/media/{{ news_item.image }}') center no-repeat; background-size: cover;border-bottom: 1px solid var(--design-color);">
+                            </div>
+                            <div class="news-text">
+                                <h3>{{ news_item.title }}</h3>
+                                {{ news_item.text }}
+                            </div>
+                            <div class="news-more-button">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news_item.id }}">
+                                    Подробнее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="u{{ news_item.id }}" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">{{ news_item.title }}</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <p>{{ news_item.text }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        <!-- <div class="row centered">
-            <div class="col-lg-10 offset-lg-1">
-                <img class="img-fluid" src="/static/img/munter.png" alt="">
-            </div>
-        </div> -->
     </div>
-
 
     <div id="partners-section">
         <div class="container">

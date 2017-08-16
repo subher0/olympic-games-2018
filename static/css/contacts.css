@@ -1,12 +1,12 @@
 #map {
-    width: 100%;
-    height: 500px;
     background-color: grey;
-    margin-bottom: 20px;
-    box-shadow: 9px 9px 9px -6px #1d1e1f;
-    overflow: hidden;
-    border-radius: 10px;
     border: 1px solid var(--font-color);
+    border-radius: 10px;
+    box-shadow: 9px 9px 9px -6px #1d1e1f;
+    height: 500px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
     z-index: 10000;
 }
 
@@ -15,17 +15,17 @@
 }
 
 .contact-info {
-    position: relative;
-    height: 500px;
-    width: 100%;
     background-color: var(--background-color);
-    box-shadow: 9px 9px 9px -6px #1d1e1f;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 1.5em;
-    font-family: "Poiret One", sans-serif;
     border: 1px solid var(--font-color);
+    border-radius: 10px;
+    box-shadow: 9px 9px 9px -6px #1d1e1f;
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.5em;
+    height: 500px;
+    margin-bottom: 20px;
     padding: 10px;
+    position: relative;
+    width: 100%;
 }
 
 .header h2 {

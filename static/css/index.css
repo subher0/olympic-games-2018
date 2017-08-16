@@ -1,9 +1,9 @@
 body {
     background-color: var(--background-color);
-    font-family: "Poiret One", sans-serif;
-    font-weight: 100;
-    font-size: 16px;
     color: var(--font-color);
+    font-family: "Poiret One", sans-serif;
+    font-size: 16px;
+    font-weight: 100;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
@@ -14,25 +14,25 @@ body {
 
 /* Links */
 .header-section h1 {
-    padding-top: 15px;
-    font-family: "Poiret One", sans-serif;
-    margin-top: 10px;
     color: white;
+    display: block;
+    font-family: "Poiret One", sans-serif;
     font-weight: 100;
     letter-spacing: 3px;
-    display: block;
+    margin-top: 10px;
+    padding-top: 15px;
     text-align: left;
 }
 
 .header-section p {
+    color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    font-size: 18.3px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 25px;
     margin-bottom: 80px;
     padding-top: 20px;
-    font-weight: 100;
-    font-family: "Roboto", sans-serif;
-    color: var(--background-color);
-    line-height: 25px;
-    font-size: 18.3px;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -43,9 +43,9 @@ body {
 /* Dark Grey Wrap */
 #project-section {
     background: var(--background-color);
-    padding-top: 70px;
-    padding-bottom: 70px;
     border-bottom: 1px solid var(--background-color-d3);
+    padding-bottom: 70px;
+    padding-top: 70px;
 }
 
 /* Light Grey */
@@ -57,20 +57,20 @@ body {
 /* Red Wrap */
 .tagline {
     background-color: var(--background-color);
-    padding-top: 35px;
     padding-bottom: 35px;
+    padding-top: 35px;
 }
 
 #r h4 {
-    font-family: "Poiret One", sans-serif;
     color: white;
+    font-family: "Poiret One", sans-serif;
     font-weight: 500;
 }
 
 #r p {
+    color: white;
     font-family: 'Poiret One', cursive;
     font-size: 20px;
-    color: white;
 }
 
 /****** SECTIONS *****/
@@ -89,10 +89,10 @@ body {
 }
 
 .text-section {
-    padding-top: 35px;
-    margin-bottom: 0;
     background-color: var(--background-color-d1);
     border-bottom: 1px solid var(--background-color-d3);
+    margin-bottom: 0;
+    padding-top: 35px;
 }
 
 .text-section h4 {
@@ -108,28 +108,27 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: #4f4f4f;
+    text-decoration: none;
 }
 
 .button {
-    padding: 12px;
-    width: 200px;
-    height: 50px;
-    border-radius: 3px;
     border: 2px solid #808080;
-    -webkit-transition: all .3s ease;
-    text-transform: uppercase;
+    border-radius: 3px;
     cursor: pointer;
     font-family: "Poiret One", sans-serif;
     font-weight: 700;
-
+    height: 50px;
+    padding: 12px;
+    text-transform: uppercase;
+    -webkit-transition: all .3s ease;
+    width: 200px;
 }
 
 .button:hover {
     background: #4a9c5a;
-    color: #000;
     border: 2px solid #40734a;
+    color: #000;
 }
 
 .button:hover:before {
@@ -143,8 +142,8 @@ a {
 }
 
 .slider-img-container {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .slick-slide {
@@ -158,14 +157,14 @@ a {
 .slider-img-container a .slick-text {
     color: var(--font-color-l1);
     margin-top: -20px;
-    text-decoration: none;
     padding: 10px 0;
+    text-decoration: none;
 }
 
 .slider-img-container:hover .slick-text {
     color: var(--font-color-d1);
-    text-decoration: underline;
     padding-bottom: 5px;
+    text-decoration: underline;
 }
 
 a:focus {
@@ -178,9 +177,81 @@ a:focus {
 /*## SLICK ADJUSTMENTS ##*/
 
 /*** GRID WITH CARDS ***/
-.olymp-circle {
-    width: ;
+.news-card-wrapper {
+    font-family: "Roboto", sans-serif;
+    height: 500px;
+    padding: 15px;
+    width: 100%;
 }
+
+.news-card {
+    border: 2px solid var(--design-color);
+    border-radius: 5px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.news-image {
+    height: 220px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.news-text {
+    left: 0;
+    max-height: 180px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    top: 230px;
+    width: 100%;
+}
+
+.news-text:after {
+    position: absolute;
+    content: '...';
+    top: 160px;
+    width: 80%;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%, var(--background-color-d1) 60%);
+    left: 10%;
+}
+
+.news-text h3 {
+    text-align: center;
+    width: 100%;
+}
+
+.news-more-button {
+    max-height: 50px;
+    position: absolute;
+    right: 10px;
+    top: 420px;
+}
+
+.news-more-button .btn {
+    background-color: var(--design-color);
+    color: var(--background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+    filter: opacity(0.9);
+    cursor: pointer;
+}
+
+.news-more-button .btn:hover {
+    box-shadow: 3px 3px 8px var(--design-color);
+    filter: opacity(1);
+    color: var(--background-color);
+    font-size: 1.1em;
+    font-family: "Open Sans", sans-serif;
+}
+
+
 /*** Hover mechanism ***/
 .icon-card .hover-on,
 .icon-card:hover .hover-off {
@@ -197,22 +268,22 @@ a:focus {
 
 /*** ICONS ON INDEX ***/
 .olympics-icon {
-    top: 120px;
-    right: 10px;
-    position: absolute;
     background-image: url("/static/img/olympic-icon.svg");
     background-size: cover;
-    width: 150px;
     height: 75px;
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    width: 150px;
 }
 
 .icon-card-icon {
-    top: 120px;
-    right: 10px;
-    position: absolute;
     background-size: cover;
-    width: 150px;
     height: 75px;
+    position: absolute;
+    right: 10px;
+    top: 120px;
+    width: 150px;
 }
 
 .icon-card:hover .olympics-icon {
