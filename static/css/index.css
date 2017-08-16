@@ -36,10 +36,6 @@ body {
     text-transform: uppercase;
 }
 
-.foreground {
-    z-index: 2;
-}
-
 /* Dark Grey Wrap */
 #project-section {
     background: var(--background-color);
@@ -304,6 +300,28 @@ a:focus {
 .ring-5 {
     border: 5px solid #029348;
     z-index: 0;
+}
+
+/*Ring:hover*/
+
+.ring-1:hover {
+background: #027CBD;
+}
+
+.ring-2:hover {
+background: #231C16;
+}
+
+.ring-3:hover {
+background: #e02121;
+}
+
+.ring-4:hover {
+background: #FCC304;
+}
+
+.ring-5:hover {
+background: #029348;
 }
 
 /*** Hover mechanism ***/
