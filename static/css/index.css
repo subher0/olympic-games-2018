@@ -301,6 +301,12 @@ a:focus {
     z-index: 0;
 }
 
+/*Ring:hover*/
+
+.ring-1:hover {
+background: #027CBD;
+}
+
 .ring-icon {
     position: absolute;
     width: 150px;
@@ -309,15 +315,27 @@ a:focus {
     top: 65px;
 }
 
+.ring-2:hover {
+background: #231C16;
+}
+
 .olymp-circle .ring-text {
     visibility: hidden;
     transform: scale(0);
     transition: all 0.4s;
 }
 
+.ring-3:hover {
+background: #e02121;
+}
+
 .olymp-circle:hover .ring-text {
     transform: scale(1);
     visibility: visible;
+}
+
+.ring-4:hover {
+background: #FCC304;
 }
 
 @media screen and (max-width: 991px) {
@@ -345,6 +363,8 @@ a:focus {
     }
 }
 
+.ring-5:hover {
+background: #029348;
 @media screen and (min-width: 992px) and (max-width: 1290px) {
     .circle-row {
         width: 900px;
