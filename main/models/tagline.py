@@ -1,6 +1,5 @@
 from django.db import models
-from django.utils.timezone import now
-from .utils import make_filepath
+import random
 
 class TaglineManager(models.Manager):
     def getAllTaglines(self):
@@ -10,9 +9,9 @@ class TaglineManager(models.Manager):
             result = None
         return result
 
-    def getRandomTagline(self, amount):
+    def getRandomTagline(self):
         try:
-            result = self.order_by('date')[:amount]
+            result = random.choice(self.all())
         except Exception:
             result = None
         return result
@@ -21,6 +20,7 @@ class TaglineManager(models.Manager):
 class Tagline(models.Model):
     title = models.TextField(verbose_name='Tagline title')
     text = models.TextField(verbose_name='Tagline text')
+    objects = TaglineManager()
 
     def __str__(self):
         return self.title

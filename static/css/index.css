@@ -89,6 +89,7 @@ body {
     border-bottom: 1px solid var(--background-color-d3);
     margin-bottom: 0;
     padding-top: 35px;
+    padding-bottom: 20px;
 }
 
 .text-section h4 {
