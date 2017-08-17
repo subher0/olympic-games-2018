@@ -23,7 +23,8 @@
 }
 
 .footer__container {
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+    padding-top: 25px;
     width: 85%;
 }
 
@@ -424,17 +425,17 @@ a, a:hover, a:focus {
     color: #e0942a;
 }
 
-.fa-twitter {
+.fa-facebook-official {
     color: var(--dark-font-color);
     font-size: 2.5em;
     margin-top: 0;
 }
 
-.fa-twitter:hover {
-    color: #5ea9dd;
+.fa-facebook-official:hover {
+    color: #365ed5;
 }
 
-.fa-twitter, .fa-vk, .fa-instagram {
+.fa-facebook-official, .fa-vk, .fa-instagram {
     transition: all 0.5s;
 }
 
