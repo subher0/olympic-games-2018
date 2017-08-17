@@ -28,6 +28,15 @@
     width: 85%;
 }
 
+.footer a {
+    color: var(--dark-font-color);
+    transition: all 0.2s;
+}
+
+.footer a:hover {
+    color: var(--background-color-d4);
+    text-decoration: underline;
+}
 /*## FOOTER STYLING ##*/
 /*****************************************************************************************************/
 /*** NAVBAR STYLING ***/
