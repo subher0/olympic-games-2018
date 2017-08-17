@@ -3,6 +3,11 @@
     max-width: 100%;
 }
 
+.card.hidden {
+    border: 0 none;
+    height: 0;
+}
+
 .card {
     background-color: var(--background-color);
     border: solid 2px var(--design-color);
@@ -62,7 +67,7 @@
 }
 
 .modal-dialog {
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .modal-backdrop {
@@ -84,6 +89,16 @@
 .modal.fade .modal-dialog {
     transform: none;
     transition: none;
+}
+
+.modal-footer button {
+    box-shadow: 0 5px 0 var(--background-color-d5);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.modal-footer button:hover {
+    box-shadow: 0 1px 0 var(--font-color);
 }
 
 /*## MODAL ADJUSTMENT ##*/

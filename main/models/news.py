@@ -24,7 +24,7 @@ class News(models.Model):
     title = models.TextField(verbose_name='news title')
     text = models.TextField(verbose_name='news text')
     short_text = models.TextField(verbose_name='news short text', max_length=512, default='No description')
-    image = models.ImageField(verbose_name='news image', default='no_image.jpg', upload_to=make_filepath)
+    image = models.ImageField(verbose_name='news image', default='no_image.png', upload_to=make_filepath)
     objects = NewsManager()
 
     def __str__(self):

@@ -6,9 +6,9 @@ let lastWindowPosition = window.pageYOffset;
 let navbar = null;
 let navtop= 0;
 
-window.onload = () => {
+window.addEventListener('load', () => {
     navbar = document.querySelector('.navbar');
-};
+});
 
 window.addEventListener('scroll', (event) => {
     let coordDifference = lastWindowPosition - window.pageYOffset;

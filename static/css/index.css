@@ -97,12 +97,6 @@ body {
     font-weight: 700;
 }
 
-.text-section p {
-    font-family: "Poiret One", sans-serif;
-    font-size: 1.3em;
-    font-weight: 500;
-}
-
 a {
     color: #4f4f4f;
     text-decoration: none;
@@ -190,6 +184,7 @@ a:focus {
     padding: 10px;
     position: relative;
     width: 100%;
+    box-shadow: 12px 12px 12px -5px #4b5257;
 }
 
 .news-image {
@@ -212,11 +207,12 @@ a:focus {
 
 .news-text:after {
     position: absolute;
-    content: '...';
+    content: '';
     top: 160px;
-    width: 80%;
+    width: 100%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, var(--background-color-d1) 60%);
-    left: 10%;
+    left: 0;
+    height: 30px;
 }
 
 .news-text h3 {
@@ -243,25 +239,30 @@ a:focus {
     border-radius: 100%;
     margin: 10px;
     transition: all 0.4s;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .olymp-circle:hover {
     border-radius: 5px;
     background: var(--background-color);
     z-index: 2;
+    animation-duration: 0.5s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 /*Rings*/
-.ring-1 {
-    border: 5px solid #027CBD;
-    z-index: 1;
-}
-
-.ring-2 {
-    border: 5px solid #231C16;
-    z-index: 1;
-}
-
 .news-more-button {
     max-height: 50px;
     position: absolute;
@@ -278,17 +279,30 @@ a:focus {
     cursor: pointer;
 }
 
-.ring-3 {
-    border: 5px solid #e02121;
-    z-index: 1;
-}
-
 .news-more-button .btn:hover {
     box-shadow: 3px 3px 8px var(--design-color);
     filter: opacity(1);
     color: var(--background-color);
     font-size: 1.1em;
     font-family: "Open Sans", sans-serif;
+}
+
+.ring-1 {
+    border: 5px solid #027CBD;
+    z-index: 1;
+    color: var(--background-color);
+}
+
+.ring-2 {
+    border: 5px solid #231C16;
+    z-index: 1;
+    color: var(--background-color);
+}
+
+.ring-3 {
+    border: 5px solid #e02121;
+    z-index: 1;
+    color: var(--background-color);
 }
 
 .ring-4 {
@@ -302,21 +316,20 @@ a:focus {
 }
 
 /*Ring:hover*/
-
-.ring-1:hover {
-background: #027CBD;
-}
-
 .ring-icon {
     position: absolute;
     width: 150px;
     height: 150px;
     left: 80px;
     top: 65px;
+    transition: all 0.4s;
 }
 
-.ring-2:hover {
-background: #231C16;
+.olymp-circle:hover .ring-icon {
+    width: 180px;
+    height: 180px;
+    top: 120px;
+    left: 65px;
 }
 
 .olymp-circle .ring-text {
@@ -325,17 +338,29 @@ background: #231C16;
     transition: all 0.4s;
 }
 
-.ring-3:hover {
-background: #e02121;
-}
-
 .olymp-circle:hover .ring-text {
     transform: scale(1);
     visibility: visible;
 }
 
+.ring-1:hover {
+    background: #027CBD;
+}
+
+.ring-2:hover {
+    background: #231C16;
+}
+
+.ring-3:hover {
+    background: #e02121;
+}
+
 .ring-4:hover {
-background: #FCC304;
+    background: #FCC304;
+}
+
+.ring-5:hover {
+    background: #029348;
 }
 
 @media screen and (max-width: 991px) {
@@ -352,6 +377,7 @@ background: #FCC304;
         left: -125px;
         width: 250px;
         height: 250px;
+        font-size: 20px;
     }
 
     .ring-icon {
@@ -359,12 +385,18 @@ background: #FCC304;
         width: 100px;
         height: 100px;
         left: 75px;
-        top: 55px;
+        top: 65px;
+        transition: all 0.4s;
+    }
+
+    .olymp-circle:hover .ring-icon {
+        width: 140px;
+        height: 140px;
+        top: 100px;
+        left: 55px;
     }
 }
 
-.ring-5:hover {
-background: #029348;
 @media screen and (min-width: 992px) and (max-width: 1290px) {
     .circle-row {
         width: 900px;
@@ -387,6 +419,14 @@ background: #029348;
         height: 120px;
         left: 70px;
         top: 60px;
+        transition: all 0.4s;
+    }
+
+    .olymp-circle:hover .ring-icon {
+        width: 160px;
+        height: 160px;
+        top: 80px;
+        left: 50px;
     }
 }
 
@@ -400,6 +440,58 @@ background: #029348;
 .icon-card:hover .hover-on {
     visibility: visible;
 }
+
+/*** MODAL ADJUSTMENT ***/
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-dialog {
+    margin-top: 100px;
+}
+
+.modal-backdrop {
+    background-color: var(--design-color);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    border: solid 1px var(--design-color);
+    border-radius: 10px;
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+.modal-content a {
+    color: var(--design-color);
+    transition: 0.2s;
+}
+
+.modal-content a:hover {
+    color: var(--font-color);
+}
+
+.modal-footer button {
+    box-shadow: 0 5px 0 var(--background-color-d5);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.modal-footer button:hover {
+    box-shadow: 0 1px 0 var(--font-color);
+}
+
+.fade {
+    background-color: var(--fade-color);
+}
+
+.modal.fade .modal-dialog {
+    transform: none;
+    transition: none;
+}
+
+/*## MODAL ADJUSTMENT ##*/
 
 /*## Hover mechanism ##*/
 
