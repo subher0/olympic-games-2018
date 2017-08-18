@@ -1,5 +1,9 @@
 {% extends "main/gen_templ.html" %}
 
+{% block title %}
+    Олимпиада
+{% endblock title %}
+
 {% block nav-olymp %}
     <li class="nav-item active"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
 {% endblock nav-olymp %}
@@ -27,6 +31,7 @@
 
 
     <div class="dg roboto">
+        <h1>Всероссийская</h1>
         <div class="container-fluid">
             <button class="btn btn-link" data-toggle="collapse" data-target="#hide"><img class="img-fluid"
                src="/static/img/logo.png" alt="">
@@ -46,7 +51,7 @@
 
             <hr>
             <br>
-            <h1>ВУЗовская</h1>
+            <h1>ВУЗовские</h1>
             <br>
 
             <button class="btn btn-link" data-toggle="collapse" data-target="#hide1"><img class="img-fluid"
