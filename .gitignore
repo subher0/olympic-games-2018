@@ -54,7 +54,7 @@ fabric.properties
 # Project
 *.log
 *.pot
-media
+
 #OTHERS
 *.orig
 *.old

@@ -120,39 +120,18 @@
     {% endautoescape %}
 
     <div id="partners-section">
+    <h2 class="roboto">Наши Партнеры</h2>
         <div class="container">
             <div class="row centered">
                 <div class="project-slider">
+                    {% for partner in partners %}
                     <div class="slider-img-container">
-                        <a target="_blank" href="http://www.dgunh.ru/">
-                            <img src="/static/img/c01.png" alt="" class="img-fluid">
-                            <h4 class="slick-text">Дагестанский Государственный Университет Народного Хозяйства</h4>
+                        <a target="_blank" href="{{ partner.link }}">
+                            <img src="/media/{{ partner.icon }}" alt="" class="img-fluid">
+                            <h4 class="slick-text">{{ partner.text }}</h4>
                         </a>
                     </div>
-                    <div class="slider-img-container">
-                        <a target="_blank" href="http://cpm.dogm.mos.ru/">
-                            <img src="/static/img/c02.png" alt="" class="img-fluid">
-                            <h4 class="slick-text">Центр Педагогического Мастерства</h4>
-                        </a>
-                    </div>
-                    <div class="slider-img-container">
-                        <a target="_blank" href="http://moscowinners.ru/">
-                            <img src="/static/img/c03.png" alt="" class="img-fluid">
-                            <h4 class="slick-text">Московская Ассоциация Победителей Олимпиад</h4>
-                        </a>
-                    </div>
-                    <div class="slider-img-container">
-                        <a target="_blank" href="http://www.dagminobr.ru/">
-                            <img src="/static/img/c04.png" alt="" class="img-fluid">
-                            <h4 class="slick-text">Министерство Образования и Науки Дагестана</h4>
-                        </a>
-                    </div>
-                    <div class="slider-img-container">
-                        <a target="_blank" href="http://centr.dgtu.ru/">
-                            <img src="/static/img/c05.png" alt="" class="img-fluid">
-                            <h4 class="slick-text">Сириус Альтаир</h4>
-                        </a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

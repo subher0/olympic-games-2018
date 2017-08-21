@@ -19,7 +19,7 @@
     border: 1px solid var(--font-color);
     border-radius: 10px;
     box-shadow: 9px 9px 9px -6px #1d1e1f;
-    font-family: "Poiret One", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5em;
     height: 500px;
     margin-bottom: 20px;
@@ -29,8 +29,8 @@
 }
 
 .header h2 {
-    color: var(-font-color);
-    font-family: 'Roboto', sans-serif;
+    color: var(--font-color);
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
 
