@@ -483,13 +483,21 @@ a, a:hover, a:focus {
     font-family: "Roboto", sans-serif !important;
     font-weight: 100;
 }
+
+.vertical-center {
+  margin-top: 30px;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
 /*## HELPER SELECTORS ##*/
 /*****************************************************************************************************/
 /*** OTHER ***/
 body {
     background-color: var(--background-color);
     color: var(--font-color);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-right: 0 !important;
     overflow-x: hidden;
 }

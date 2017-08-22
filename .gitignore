@@ -58,4 +58,5 @@ fabric.properties
 #OTHERS
 *.orig
 *.old
+.remote-sync.json
 stress_test
