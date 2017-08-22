@@ -417,7 +417,7 @@ a, a:hover, a:focus {
 
 .fa-vk {
     color: var(--dark-font-color);
-    font-size: 2.5em;
+    font-size: 1.6em;
     margin-top: 0;
 }
 
@@ -427,7 +427,7 @@ a, a:hover, a:focus {
 
 .fa-instagram {
     color: var(--dark-font-color);
-    font-size: 2.5em;
+    font-size: 1.6em;
     margin-top: 0;
 }
 
@@ -437,7 +437,7 @@ a, a:hover, a:focus {
 
 .fa-facebook-official {
     color: var(--dark-font-color);
-    font-size: 2.5em;
+    font-size: 1.6em;
     margin-top: 0;
 }
 
@@ -446,9 +446,12 @@ a, a:hover, a:focus {
 }
 
 .fa-facebook-official, .fa-vk, .fa-instagram {
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
+.fa.fa-vk, .fa.fa-instagram, .fa.fa-facebook-official {
+  margin-top: 10px;
+}
 /*## ICONS ##*/
 /**********************************************************************************/
 /*** HEADER WITH BACKGROUND ***/
