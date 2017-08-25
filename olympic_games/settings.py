@@ -131,8 +131,8 @@ STATIC_ROOT = 'static'
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
-GEOIP_DATABASE = '/home/farid/Desktop/Workspace/work/olympic_games/static/third_party/GeoLiteCity.dat'
-GEOIPV6_DATABASE = '/home/farid/Desktop/Workspace/work/olympic_games/static/third_party/GeoLiteCityv6.dat'
+GEOIP_DATABASE = './static/third_party/GeoLiteCity.dat'
+GEOIPV6_DATABASE = './static/third_party/GeoLiteCityv6.dat'
 
 COMPRESS_ENABLED = False
 STATICFILES_FINDERS = (
