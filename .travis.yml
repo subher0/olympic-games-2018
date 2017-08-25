@@ -17,4 +17,6 @@ before_script:
   - psql -c 'create database olympic_games;' -U postgres
 
 script:
-  - gunicorn -b 0.0.0.0:8000 olympic_games.wsgi
+  - python manage.py makemigrations
+  - python migrate
+  - python manage.py test
