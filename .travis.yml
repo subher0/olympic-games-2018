@@ -18,5 +18,5 @@ before_script:
 
 script:
   - python manage.py makemigrations
-  - python migrate
+  - python manage.py migrate
   - python manage.py test
