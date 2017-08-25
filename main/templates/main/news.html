@@ -27,9 +27,11 @@
     </div>
     <div class="container-fluid">
         <div class="card-deck">
+        {% autoescape off %}
             {% for news_item in news %}
                 {% include "main/elements/newsT.html" %}
             {% endfor %}
+        {% endautoescape %}
         </div>
     </div>
 {% endblock content %}

@@ -117,3 +117,8 @@
     width: 100%;
     z-index: 2;
 }
+
+a {
+    color: #4f4f4f;
+    text-decoration: none;
+}

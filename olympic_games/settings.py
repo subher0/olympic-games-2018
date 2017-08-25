@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'compressor',
+    'easy_timezones',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'easy_timezones.middleware.EasyTimezoneMiddleware',
 ]
 
 X_FRAME_OPTIONS = 'ALLOW-FROM http://webvisor.com/'
@@ -128,6 +130,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
+
+GEOIP_DATABASE = '/home/farid/Desktop/Workspace/work/olympic_games/static/third_party/GeoLiteCity.dat'
+GEOIPV6_DATABASE = '/home/farid/Desktop/Workspace/work/olympic_games/static/third_party/GeoLiteCityv6.dat'
 
 COMPRESS_ENABLED = False
 STATICFILES_FINDERS = (

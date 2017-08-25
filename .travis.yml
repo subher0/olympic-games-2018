@@ -1,0 +1,22 @@
+dist: trusty
+sudo: required
+language: python
+
+python:
+  - 3.5
+
+env:
+  - TEXNOPROM_DB_LOGIN="postgres"
+  - TEXNOPROM_DB_PASSWORD=""
+  - TEXNOPROM_DB_HOST="127.0.0.1"
+
+services:
+  - postgresql
+
+install: "pip install -r requirements.txt"
+
+before_script:
+  - psql -c 'create database olympic_games;' -U postgres
+
+script:
+  - gunicorn -b 0.0.0.0:8000 olympic_games.wsgi
