@@ -3,6 +3,7 @@ from django.utils.timezone import now
 from .utils import make_filepath
 from uuid import uuid4
 
+
 class ProjectManager(models.Manager):
     def getAllProjects(self):
         try:
@@ -22,8 +23,8 @@ class ProjectManager(models.Manager):
 class Project(models.Model):
     date = models.DateTimeField(verbose_name='publication date', default=now)
     title = models.TextField(verbose_name='project title')
-    text = models.TextField(verbose_name='project text')
     description = models.TextField(verbose_name='project description', max_length=256, default='No description')
+    link = models.TextField(verbose_name='project link', default='/404')
     icon = models.FileField(verbose_name='project icon', default='no_icon.svg', upload_to=make_filepath)
     objects = ProjectManager()
 

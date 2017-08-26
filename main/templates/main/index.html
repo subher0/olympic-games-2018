@@ -41,7 +41,7 @@
                 {% for project in upperProjects %}
                     <div class="col-lg-4 col-wo-padding">
                         <div class="olymp-circle-wrapper">
-                            <div href="/projects/{{ project.id }}"
+                            <div href="/projects/{{ project.link }}"
                                  class="olymp-circle {% cycle 'ring-1' 'ring-2' 'ring-3' %}">
                                 <div class="ring-icon"
                                      style="background-image: url('/media/{{ project.icon }}')"></div>
@@ -57,7 +57,7 @@
                 {% for project in lowerProjects %}
                     <div class="col-lg-4 {% cycle 'offset-lg-2' '' %} col-wo-padding">
                         <div class="olymp-circle-wrapper">
-                            <div href="/projects/{{ project.id }}" class="olymp-circle {% cycle 'ring-4' 'ring-5' %}">
+                            <div href="/projects/{{ project.link }}" class="olymp-circle {% cycle 'ring-4' 'ring-5' %}">
                                 <div class="ring-icon"
                                      style="background-image: url('/media/{{ project.icon }}')"></div>
                                 <div class="ring-text">

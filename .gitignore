@@ -57,6 +57,7 @@ fabric.properties
 
 #OTHERS
 dumps
+media
 *.orig
 *.old
 .remote-sync.json

@@ -468,13 +468,16 @@ a:focus {
 }
 
 .modal-footer button {
-    box-shadow: 0 5px 0 var(--background-color-d5);
+    background-color: var(--design-color);
+    box-shadow: 0 5px 0 var(--design-color-d1);
     cursor: pointer;
     transition: all 0.4s;
+    color: var(--background-color);
 }
 
 .modal-footer button:hover {
-    box-shadow: 0 1px 0 var(--font-color);
+    background-color: var(--design-color);
+    box-shadow: 0 1px 0 var(--design-color-d2);
 }
 
 .fade {
@@ -493,15 +496,6 @@ a:focus {
 /*## GRID WITH CARDS ##*/
 
 /*** ICONS ON INDEX ***/
-.olympics-icon {
-    background-image: url("/static/img/olympic-icon.svg");
-    background-size: cover;
-    height: 75px;
-    position: absolute;
-    right: 10px;
-    top: 120px;
-    width: 150px;
-}
 
 .icon-card-icon {
     background-size: cover;
@@ -510,10 +504,6 @@ a:focus {
     right: 10px;
     top: 120px;
     width: 150px;
-}
-
-.icon-card:hover .olympics-icon {
-    background-image: url("/static/img/olympic-icon-inversed.svg");
 }
 
 /*## ICONS ON INDEX ##*/

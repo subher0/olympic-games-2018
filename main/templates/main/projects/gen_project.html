@@ -1,0 +1,19 @@
+{% extends "main/gen_templ.html" %}
+
+{% block content %}
+    <div class="header-section">
+        <div class="container foreground">
+            <div class="row centered">
+                <div class="col-lg-8 offset-lg-2">
+                    <h3 class="roboto">{% block project-title %} Проект {% endblock %}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="header-overlay"></div>
+    </div>
+
+    {% block project-content %}
+    {% endblock project-content %}
+
+
+{% endblock content %}

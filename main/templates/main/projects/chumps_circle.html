@@ -1,0 +1,24 @@
+{% extends "main/projects/gen_project.html" %}
+
+{% block title %} Кружок от Чемпионов {% endblock %}
+
+{% block styles %}
+    <link href="/static/projects/chump_circle/chump_style.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="/static/projects/chump_circle/chump_script.js"></script>
+{% endblock scripts %}
+
+{% block project-title %}Кружок от Чемпионов{% endblock %}
+
+{% block project-content %}
+    <div class="container">
+        <div class="row">
+            {% for chump in chumps %}
+                {% include "main/elements/chumpT.html" %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock project-content %}
