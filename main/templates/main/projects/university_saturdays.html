@@ -4,13 +4,18 @@
 
 {% block styles %}
     <link href="/static/projects/university_saturdays/saturdays_style.css" rel="stylesheet">
+    <link href="/static/third_party/calendar/daterangepicker.css" rel="stylesheet">
 {% endblock styles %}
 
 {% block scripts %}
     <script src="/static/projects/university_saturdays/saturdays_script.js"></script>
+    <script src="/static/third_party/calendar/daterangepicker.js"></script>
+    <script src="/static/third_party/calendar/moment.min.js"></script>
 {% endblock scripts %}
 
 {% block project-title %}Университетские Субботы{% endblock %}
 
 {% block project-content %}
+{% csrf_token %}
+
 {% endblock project-content %}
