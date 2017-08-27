@@ -2,9 +2,27 @@
     <div class="chump-wrapper">
         <div class="chump">
             <div class="chump-image" style="background-image: url('/media/{{ chump.image }}')"></div>
-            <div class="chump-name"><h3>{{ chump.name }}</h3></div>
-            <div class="chump-about"><h4>{{ chump.about }}</h4></div>
-            <div class="chump-specialty"><h4>{{ chump.specialty }}</h4></div>
+            <div class="chump-text-section">
+                <div class="chump-name"><h3>{{ chump.name }}</h3></div>
+                <div class="chump-about"><h4>{{ chump.about_short }}</h4></div>
+                <div class="chump-specialty"><h4>Предметы: {{ chump.specialty }}</h4></div>
+            </div>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ chump.id }}">Подробнее</button>
+        </div>
+    </div>
+    <div id="u{{ chump.id }}" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">{{ chump.name }}</h2>
+                </div>
+                <div class="modal-body">
+                    <p>{{ chump.about }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
         </div>
     </div>
 

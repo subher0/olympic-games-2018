@@ -3,17 +3,112 @@
 }
 
 .chump-wrapper {
+    position: relative;
     padding: 10px;
+    height: 540px;
 }
 
 .chump {
+    position: relative;
     border: 2px solid var(--design-color);
+    border-radius: 5px;
+    box-shadow: 11px 10px 10px -8px var(--font-color);
+    height: 100%;
+}
+
+.chump-text-section {
+    position: relative;
+    top: 200px;
+    height: 280px;
+}
+
+.chump button {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.chump-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.chump-about {
+    position: absolute;
+    top: 60px;
+    left: 3%;
+    height: 140px;
+    width: 95%;
+    overflow: hidden;
+}
+
+.chump-specialty {
+    position: absolute;
+    top: 210px;
+    left: 3%;
+    height: 50px;
+    width: 95%;
+    overflow: hidden;
 }
 
 .chump-image {
-    width: 100%;
-    height: 300px;
+    position: absolute;
+    width: 190px;
+    left: 50%;
+    margin-left: -95px;
+    top: 10px;
+    height: 190px;
+    border-radius: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-top: 2px solid var(--design-color);
+    border-bottom: 2px solid var(--design-color);
 }
+
+/*** MODAL ADJUSTMENT ***/
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-dialog {
+    margin-top: 100px;
+}
+
+.modal-backdrop {
+    background-color: var(--design-color);
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    border: solid 1px var(--design-color);
+    border-radius: 10px;
+    color: var(--font-color);
+    font-family: "Open Sans", sans-serif;
+}
+
+.fade {
+    background-color: var(--fade-color);
+}
+
+.modal.fade .modal-dialog {
+    transform: none;
+    transition: none;
+}
+
+.modal-footer button {
+    box-shadow: 0 5px 0 var(--background-color-d5);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.modal-footer button:hover {
+    box-shadow: 0 1px 0 var(--font-color);
+}
+/*## MODAL ADJUSTMENT ##*/

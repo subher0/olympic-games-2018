@@ -1,0 +1,30 @@
+{% extends "main/gen_templ.html" %}
+
+{% block title %}
+    О нас
+{% endblock title %}
+
+{% block styles %}
+    <link href="/static/css/about_us.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="/static/js/about_us.js"></script>
+{% endblock scripts %}
+
+{% block nav-about %}
+    <li class="nav-item active"><a class="nav-link" href="/about">О нас<span class="sr-only"></span></a></li>
+{% endblock nav-about %}
+
+{% block content %}
+    <div class="header-section">
+        <div class="container foreground">
+            <div class="row centered">
+                <div class="col-lg-8 offset-lg-2 col-wo-padding">
+                    <h2>О Нас</h2>
+                </div>
+            </div>
+        </div>
+        <div class="header-overlay"></div>
+    </div>
+{% endblock content %}

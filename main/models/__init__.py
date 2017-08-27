@@ -5,3 +5,4 @@ from .project import Project
 from .tagline import Tagline
 from .partner import Partner
 from .projects.chumps_circle import Chump
+from .projects.hall_of_fame import FamousOne

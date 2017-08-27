@@ -26,10 +26,10 @@ class Event(models.Model):
     title = models.TextField(verbose_name='Title')
     description = models.TextField(verbose_name='Description')
     maximum_capacity = models.IntegerField(verbose_name='Maximum capacity')
-    currentlyRegistered = models.IntegerField(verbose_name='Currently registered', editable=False)
+    currentlyRegistered = models.IntegerField(verbose_name='Currently registered', editable=False, default=False)
     university = models.ForeignKey(University, verbose_name='University')
     image = models.ImageField(verbose_name='news image', default='no_image.png', upload_to=make_filepath)
     objects = EventManager()
 
     def __str__(self):
-        return self.name
+        return self.title

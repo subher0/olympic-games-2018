@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <!-----------------------------------SEO------------------------------->
     <meta name="yandex-verification" content="dae266481f16f3f0"/>
-    <meta name="google-site-verification" content="C6UdctQ8KWtBM5omTnULQz6gtKx9uGLDoRI7-Sofzp8" />
+    <meta name="google-site-verification" content="C6UdctQ8KWtBM5omTnULQz6gtKx9uGLDoRI7-Sofzp8"/>
     <!-----------------------------------/SEO------------------------------->
     <link rel="icon" href="/static/icons/logo.png">
     <title>{% block title %}ДАПО{% endblock title %}</title>
@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row row-wo-margin">
             <div class="col-lg-2 inline-flex">
-                  <a class="navbar-brand" href="/"><span class="logo-icon"></span></a>
+                <a class="navbar-brand" href="/"><span class="logo-icon"></span></a>
                 <h3 class="vertical-center hidden-md-down">ДАПО</h3>
             </div>
             <div class="col-lg-8 offset-lg-2 col-wo-padding">
@@ -63,16 +63,31 @@
                                 </li>
                             {% endblock nav-olymp %}
                             {% block nav-projects %}
-                                <li class="nav-item"><a class="nav-link" href="/projects">Проекты<span
+                                <li class="nav-item dropdown">
+                                    <div class="dropdown">
+                                        <a class="nav-link dropdown-toggle" href="http://example.com"
+                                           id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="true">
+                                            Проекты
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="/projects/journey_to_dream">Путь к мечте</a>
+                                            <a class="dropdown-item" href="/projects/elective">Факультатив</a>
+                                            <a class="dropdown-item" href="/projects/hall_of_fame">Зал Славы</a>
+                                            <a class="dropdown-item" href="/projects/chumps_circle">Кружок от
+                                                Чемпионов</a>
+                                            <a class="dropdown-item" href="/projects/university_saturdays">Университетские
+                                                субботы</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endblock nav-projects %}
+                            {% block nav-about %}
+                                <li class="nav-item"><a class="nav-link" href="/about">О нас<span
                                         class="sr-only"></span></a>
                                     <div class="underline-bar"></div>
                                 </li>
-                            {% endblock nav-projects %}
-                            {#                            {% block nav-about %}#}
-                            {#                                <li class="nav-item"><a class="nav-link" href="">О нас<span class="sr-only"></span></a>#}
-                            {#                                    <div class="underline-bar"></div>#}
-                            {#                                </li>#}
-                            {#                            {% endblock nav-about %}#}
+                            {% endblock nav-about %}
                             {% block nav-contacts %}
                                 <li class="nav-item"><a class="nav-link" href="/contacts">Контакты<span
                                         class="sr-only"></span></a>
@@ -109,12 +124,14 @@
                     </div>
                 </div>
                 <div class="col-lg-1 offset-lg-5">
-                  <div class="row d-flex justify-content-end">
-                    <div class="col-4 col-lg-12"><a href="https://vk.com/dagolimpiad" target="_blank"><span class="fa fa-vk"></span></a></div>
-                    <div class="col-4 col-lg-12"><a href="https://www.instagram.com/dagolympiad" target="_blank"><span
-                            class="fa fa-instagram"></span></a></div>
-                    <div class="col-4 col-lg-12"><span class="fa fa-facebook-official"></span></div>
-                  </div>
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-4 col-lg-12"><a href="https://vk.com/dagolimpiad" target="_blank"><span
+                                class="fa fa-vk"></span></a></div>
+                        <div class="col-4 col-lg-12"><a href="https://www.instagram.com/dagolympiad"
+                                                        target="_blank"><span
+                                class="fa fa-instagram"></span></a></div>
+                        <div class="col-4 col-lg-12"><span class="fa fa-facebook-official"></span></div>
+                    </div>
                 </div>
             </div>
         </div>
