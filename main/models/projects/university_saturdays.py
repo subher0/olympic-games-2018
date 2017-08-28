@@ -21,6 +21,13 @@ class EventManager(models.Manager):
             result = None
         return result
 
+    def getFutureEvents(self):
+        try:
+            result = self.filter(date__gte=now())
+        except Exception:
+            result = None
+        return result
+
     def getById(self, id):
         try:
             result = self.get(id=id)
@@ -91,6 +98,7 @@ class Event(models.Model):
     auditory = models.ManyToManyField(Auditory, verbose_name='Auditory')
     type = models.ForeignKey(EventType, verbose_name='Event type', default=event_default)
     subject = models.ForeignKey(Subject, verbose_name='Subject', default=subject_default)
+    isClosed = models.BooleanField(verbose_name='Registration closed', default=False)
     image = models.ImageField(verbose_name='news image', default='no_image.png', upload_to=make_filepath)
     objects = EventManager()
 

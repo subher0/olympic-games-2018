@@ -9,6 +9,9 @@ class PupilManager(Manager):
         pupil = Pupil(name=name, phone=phone, email=email, school=school, grade=grade, event=event)
         pupil.save()
 
+    def getByEvent(self, event):
+        return self.filter(event=event).order_by('name')
+
 
 class Pupil(models.Model):
     name = models.CharField(verbose_name='Name', max_length=255)

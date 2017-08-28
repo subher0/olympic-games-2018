@@ -6,6 +6,14 @@ h4 {
   color: white;
 }
 
+.error-message {
+    color: var(--alarm-color);
+}
+
+.success-message {
+    color: var(--success-color);
+}
+
 .event-wrapper {
     padding: 15px;
 }

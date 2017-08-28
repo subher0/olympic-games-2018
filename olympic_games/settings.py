@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -23,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*!%la6ogq_=krau1ukfr3s9b4nm4454jb%+zmbw$d$88o*j&41'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['37.204.2.4', 'olimp05.ru', 'www.olimp05.ru', 'dev.olimp05.ru', '127.0.0.1']
 
@@ -112,13 +113,19 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
+
+EMAIL_HOST = os.environ.get('OLIMP_EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('OLIMP_EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('OLIMP_EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+EMAIL_PORT = '587'
 
 
 # Static files (CSS, JavaScript, Images)

@@ -67,6 +67,11 @@
                 </div>
             </div>
         </form>
+        {% if error_message == '' %}
+            <h3 class="success-message">{{ success_message }}</h3>
+        {% else %}
+            <h3 class="error-message">{{ error_message }}</h3>
+        {% endif %}
 
         {% for event in events %}
             {% include "main/elements/eventT.html" %}
@@ -78,11 +83,12 @@
             <form enctype="multipart/form-data" action="/projects/university_saturdays/register" method="POST"
                   class="centered">
                 {% csrf_token %}
-                <input name="nameField" class="form-control" placeholder="ФИО">
-                <input name="emailField" class="form-control" placeholder="Email" type="email">
-                <input name="schoolField" class="form-control" placeholder="Школа">
-                <input name="gradeField" class="form-control" placeholder="Класс">
-                <input name="phoneField" class="form-control" placeholder="Телефон">
+                <input name="nameField" class="form-control" placeholder="ФИО" value="{{ form.nameField.value }}">
+                <input name="emailField" class="form-control" placeholder="Email" type="email"
+                       value="{{ form.emailField.value }}">
+                <input name="schoolField" class="form-control" placeholder="Школа" value="{{ form.schoolField.value }}">
+                <input name="gradeField" class="form-control" placeholder="Класс" value="{{ form.gradeField.value }}">
+                <input name="phoneField" class="form-control" placeholder="Телефон" value="{{ form.phoneField.value }}">
                 <input id="eventId" name="eventId" hidden>
                 <button class="btn btn-primary submit" type="submit">Зарегистрироваться</button>
                 <button class="btn btn-primary submit close-button">Закрыть</button>

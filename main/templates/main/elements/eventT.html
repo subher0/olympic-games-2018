@@ -30,7 +30,7 @@
                 <button class="btn btn-primary info-button">Подробнее</button>
             </div>
         </div>
-        {% if event.currentlyRegistered == event.maximumCapacity %}
+        {% if event.currentlyRegistered == event.maximumCapacity or event.isClosed %}
             <div class="event-overlay centered">
                 <h3>Регистрация закрыта!</h3>
             </div>
