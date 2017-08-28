@@ -1,3 +1,7 @@
 .header-section h3 {
     color: var(--background-color);
 }
+
+h4 {
+  color: white;
+}

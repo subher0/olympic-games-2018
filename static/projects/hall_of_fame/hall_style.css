@@ -1,3 +1,30 @@
 .header-section h3 {
     color: var(--background-color);
 }
+
+.famousOne-image {
+  margin: 20px auto 20px auto;
+  border-radius: 100%;
+  width: 280px;
+  height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.famousOne-name{
+  height: 50px;
+  width: 100%;
+}
+
+.famousOne-about{
+}
+
+.famousOne-specialty h4{
+  color: var(--font-color-l3);
+}
+
+.famousOne-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

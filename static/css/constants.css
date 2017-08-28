@@ -2,6 +2,9 @@
     --font-color-d1: #121319;
     --font-color: #22252d;
     --font-color-l1: #363a41;
+    --font-color-l2: #4A4E55;
+    --font-color-l3: #5C6269;
+    --font-color-l4: #70767D;
 
     --background-color: #F2F2F7;
     --background-color-d1: #dedee3;
@@ -10,20 +13,6 @@
     --background-color-d4: #a2a2a7;
     --background-color-d5: #8e8e93;
     --background-color-d6: #7a7a7f;
-
-    /*--design-color-d2: #313269;*/
-    /*--design-color-d1: #2f347d;*/
-    /*--design-color: #35449b;*/
-    /*--design-color-l1: #3848af;*/
-    /*--design-color-l2: #3a48c3;*/
-    /*--design-color-l3: #4659d7;*/
-
-    /*--design-color-d2: #3e3e7d;*/
-    /*--design-color-d1: #4a4a91;*/
-    /*--design-color: #4B50A5;*/
-    /*--design-color-l1: #4a4fb9;*/
-    /*--design-color-l2: #4a4fcd;*/
-    /*--design-color-l3: #4e53e1;*/
 
     --design-color-d2: #025d95;
     --design-color-d1: #0267a9;

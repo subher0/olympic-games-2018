@@ -1,147 +1,164 @@
-{% extends "main/gen_templ.html" %}
-
-{% block title %}
-    Олимпиада
-{% endblock title %}
-
-{% block nav-olymp %}
-    <li class="nav-item active"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
-{% endblock nav-olymp %}
-
-{% block scripts %}
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script src="/static/js/index.js"></script>
-{% endblock scripts %}
-
-{% block styles %}
-    <link href="/static/css/olimp.css" rel="stylesheet">
-{% endblock styles %}
-
-{% block content %}
-    <div class="header-section">
-        <div class="container foreground">
-            <div class="row centered">
-                <div class="col-lg-8 offset-lg-2 col-wo-padding">
-                    <h3 class="roboto">Олимпиады</h3>
-                </div>
-            </div>
-        </div>
-        <div class="header-overlay"></div>
+{% extends "main/gen_templ.html" %} {% block title %} Олимпиада {% endblock title %} {% block nav-olymp %}
+<li class="nav-item active"><a class="nav-link" href="/olympics">Олимпиада<span class="sr-only"></span></a></li>
+{% endblock nav-olymp %} {% block scripts %}
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock scripts %} {% block styles %}
+<link href="/static/css/olimp.css" rel="stylesheet"> {% endblock styles %} {% block content %}
+<div class="header-section">
+  <div class="container foreground">
+    <div class="row centered">
+      <div class="col-lg-8 offset-lg-2 col-wo-padding">
+        <h3 class="roboto">Олимпиады</h3>
+      </div>
     </div>
+  </div>
+  <div class="header-overlay"></div>
+</div>
 
 
-    <div class="dg roboto">
-        <h1>Всероссийская</h1>
-        <div class="container-fluid">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide"><img class="img-fluid"
+<div class="dg roboto">
+  <h1>Всероссийская</h1>
+  <div class="container-fluid">
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide"><img class="img-fluid"
                src="/static/img/logo.png" alt="">
             </button>
-            <div class="collapse" id="hide">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse" id="hide">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9 align-self-center">
+          <h3><a href="http://www.rosolymp.ru/" class="hyper-link" target="_blank">Всероссийская олимпиада школьников</a> – самое престижное и масштабное олимпиадное событие страны. Проводится в 4 этапа: школьный (сентябрь), муниципальный (ноябрь), региональный (январь) и заключительный (апрель). Является наиболее сложной из всех олимпиад, и одновременно дает лучшие льготы – гарантирует поступление без экзаменов в любой ВУЗ по профильному направлению предмета олимпиады. <br><a href="http://www.rosolymp.ru/index.php?option=com_participant&action=task&Itemid=6789" class="hyper-link" target="_blank">Задания прошлых лет</a>
+</h3>
+        </div>
+      </div>
+    </div>
 
-            <hr>
-            <br>
-            <h1>ВУЗовские</h1>
-            <br>
+    <hr>
+    <br>
+    <h1>ВУЗовские</h1>
+    <br>
 
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide1"><img class="img-fluid"
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide1"><img class="img-fluid"
                 src="/static/img/pop1.png" alt="">
             </button>
-            <div class="collapse" id="hide1">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse" id="hide1">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9 align-self-center">
+          <h3> <br><a class="hyper-link" href="http://olymp.msu.ru/" target="_blank">"Ломоносов" МГУ</a><br> Олимпиада известна по всей России, включена в Перечень олимпиад школьников, дающих льготы при поступлении в высшие учебные заведения РФ. <br><a href="http://olymp.msu.ru/mod/page/view.php?id=16" class="hyper-link" target="_blank">Задания прошлых лет</a><br>
+          </h3>
+        </div>
+      </div>
+    </div>
 
-            <hr>
+    <hr>
 
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide2"><img class="img-fluid"
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide2"><img class="img-fluid"
                 src="/static/img/pop2.png" alt="">
             </button>
-            <div class="collapse" id="hide2">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse" id="hide2">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10 align-self-center">
+          <h3><br><a href="https://pvg.mk.ru/" class="hyper-link" target="_blank">"Покори Воробьёвы горы!" МГУ</a><br>
+          Эта престижная олимпиада –отличная возможность попробовать свои силы в стенах главного здания одного из лучших ВУЗов страны.
+          <br><a href="https://pvg.mk.ru/archive/2015-2016/" class="hyper-link" target="_blank">Задания прошлых лет</a><br></h3>
+        </div>
+      </div>
+    </div>
 
-            <hr>
+    <hr>
 
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide3"><img class="img-fluid"
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide3"><img class="img-fluid"
                 src="/static/img/pop3.png" alt="">
             </button>
-            <div class="collapse" id="hide3">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse" id="hide3">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9 align-self-center">
+          <h3><br><a class="hyper-link" href="https://olymp.hse.ru/mmo/" target="_blank">"Высшая проба" ВШЭ</a><br>
+            Межрегиональная предметная олимпиада школьников, проводимая Высшей школой экономики на базе самого университета, других вузов и школ России и ближнего зарубежья.
+                              <br><a class="hyper-link" href="https://olymp.hse.ru/mmo/tasks-math" target="_blank">Задания прошлых лет</a><br>
+                              <a class="hyper-link" href="https://olymp.hse.ru/mmo/materials-lang" target="_blank">Материалы для подготовки</a></h3>
+        </div>
+      </div>
+    </div>
 
-            <hr>
+    <hr>
 
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide4"><img class="img-fluid"
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide4"><img class="img-fluid"
                 src="/static/img/pop4.png" alt="">
             </button>
-            <div class="collapse" id="hide4">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse" id="hide4">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9 align-self-center">
+          <h3>
 
-            <hr>
+<br><a href="http://olympiada.spbu.ru/" class="hyper-link" target="_blank">Олимпиада СПбГУ</a><br>
+Для Санкт-Петербургского государственного университета
+проведение этой масштабной олимпиады стало традицией. Оба тура состязания проходят очно (отборочный есть и заочный) на площадках в городах каждого региона!
+ <br><a href="http://olympiada.spbu.ru/index.php/olimpiada-shkolnik" class="hyper-link" target="_blank">Задания прошлых лет</a><br>
 
-            <button class="btn btn-link" data-toggle="collapse" data-target="#hide5"><img class="img-fluid"
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide5"><img class="img-fluid"
                 src="/static/img/pop5.png" alt="">
             </button>
-            <div class="collapse" id="hide5">
-                <div class="row centered olimp-highlight">
-                    <br>
-                    <div class="col-sm-2">
-                    </div>
-                    <div class="col-sm-9 align-self-center">
-                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quod ad eius obcaecati,
-                            eaque magnam molestiae necessitatibus, odit unde explicabo ducimus officia pariatur iste
-                            modi sequi recusandae possimus! Dolores, accusantium!</h3>
-                    </div>
-                </div>
-            </div>
-
+    <div class="collapse" id="hide5">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
         </div>
+        <div class="col-sm-9 align-self-center">
+          <h3>
+              <br><a href="http://olymp.mgimo.ru/" class="hyper-link" target="_blank">Олимпиада МГИМО</a><br>
+              Олимпиада МГИМО МИД России
+              для школьников по профилю
+              «гуманитарные и социальные науки»
+              <br><a href="http://olymp.mgimo.ru/razdely/zadaniya" class="hyper-link" target="_blank">Задания прошлых лет</a><br>
+          </h3>
+        </div>
+      </div>
     </div>
+
+    <hr>
+
+    <button class="btn btn-link" data-toggle="collapse" data-target="#hide6"><img class="img-fluid"
+                src="/static/img/pop7.png" alt="">
+            </button>
+    <div class="collapse" id="hide6">
+      <div class="row centered olimp-highlight">
+        <br>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-9 align-self-center">
+          <h3>
+              <br><a href="http://mos.olimpiada.ru/" class="hyper-link" target="_blank">Московская олимпиада школьников</a><br>
+              На олимпиады могут приходить все, кто хотят — младшие и старшие, «троечники» и «отличники», «физики» и «лирики»...
+              Ваши оригинальные идеи и нестандартное мышление помогут справиться с заданиями, а сама жизнь в этом удивительном мире — раскрыть свои таланты и расширить кругозор.
+              <br><a href="http://mos.olimpiada.ru/main/table/tasks/#table" class="hyper-link" target="_blank">Задания прошлых лет</a><br>
+          </h3>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
 {% endblock content %}

@@ -6,6 +6,8 @@
             <div class="row centered">
                 <div class="col-lg-8 offset-lg-2">
                     <h3 class="roboto">{% block project-title %} Проект {% endblock %}</h3>
+                    {% block project-description %}
+                    {% endblock project-description %}
                 </div>
             </div>
         </div>
@@ -14,6 +16,7 @@
 
     {% block project-content %}
     {% endblock project-content %}
+
 
 
 {% endblock content %}

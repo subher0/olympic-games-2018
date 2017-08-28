@@ -51,3 +51,11 @@ h3 {
 .btn:focus, .btn-primary:focus {
     box-shadow: none;
 }
+
+.hyper-link {
+  color: var(--design-color);
+}
+
+.hyper-link:focus {
+  color: var(--design-color);
+}
