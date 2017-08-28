@@ -2,13 +2,13 @@ window.addEventListener('load', () => {
     preventOverlapping();
     hoverOnMobiles();
     $('.project-slider').slick({
-    dots: true,
-    slidesToShow: screen.width < 1000 ? screen.width > 600 ? 3 : 2 : 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false
-});
+        dots: true,
+        slidesToShow: screen.width < 1000 ? screen.width > 600 ? 3 : 2 : 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false
+    });
 });
 
 function preventOverlapping() {
