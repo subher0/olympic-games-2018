@@ -48,8 +48,13 @@ def event_default():
     try:
         res = EventType.objects.first()
     except Exception as e:
-        res = EventType(type='Родительское собрание')
+        res = EventType(type='Лекция')
         res.save()
+
+    if res is None:
+        res = EventType(type='Лекция')
+        res.save()
+
     return res.id
 
 
@@ -58,8 +63,13 @@ def subject_default():
     try:
         res = Subject.objects.first()
     except Exception:
-        res = Subject(subject='Труд')
+        res = Subject(subject='История')
         res.save()
+
+    if res is None:
+        res = Subject(subject='История')
+        res.save()
+
     return res.id
 
 
