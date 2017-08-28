@@ -15,9 +15,9 @@
             <div class="col-md-3">
                 <h4>Тип мероприятия: {{ event.type }}</h4>
                 <h4>Аудитория:
-                {% for auditory in event.auditory.all %}
-                    {{ auditory.auditory }}
-                {% endfor %}
+                    {% for auditory in event.auditory.all %}
+                        {{ auditory.auditory }}
+                    {% endfor %}
                 </h4>
             </div>
             <div class="col-md-12">
@@ -30,5 +30,10 @@
                 <button class="btn btn-primary info-button">Подробнее</button>
             </div>
         </div>
+        {% if event.currentlyRegistered == event.maximumCapacity %}
+            <div class="event-overlay centered">
+                <h3>Регистрация закрыта!</h3>
+            </div>
+        {% endif %}
     </div>
 </div>

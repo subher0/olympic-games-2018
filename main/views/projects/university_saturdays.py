@@ -40,7 +40,7 @@ def signup_for_event(request):
         form = EventSignupForm(request.POST)
         if form.is_valid():
             event = Event.objects.getById(form.cleaned_data['eventId'])
-            if event.currentlyRegistered >= event.maximumCapacity:
+            if event.currentlyRegistered > event.maximumCapacity:
                 return redirect('/')
             event.currentlyRegistered += 1
             event.university.rating += 1
