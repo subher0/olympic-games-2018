@@ -5,3 +5,62 @@
 h4 {
   color: white;
 }
+
+.event-wrapper {
+    padding: 15px;
+}
+
+.event {
+    border: 2px solid var(--font-color-l1);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--font-color);
+    color: var(--background-color);
+}
+
+.reg-button {
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.reg-button:hover {
+    background-color: var(--background-color-d5);
+    color: var(--font-color-d1);
+}
+
+
+.info-button {
+    background-color: var(--background-color-d2);
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: var(--background-color-d5);
+    color: var(--font-color-d1);
+}
+
+.search-button {
+    margin: 10px auto;
+}
+
+.registration-form-wrapper {
+    position: fixed;
+    top: 100px;
+    right: 10%;
+    z-index: 10000000;
+    width: 80%;
+    height: 400px;
+    background-color: var(--font-color-l1);
+    border-radius: 10px;
+}
+
+.registration-form {
+    padding: 10px;
+}
+
+input, select {
+    max-width: 500px;
+    margin: 10px auto;
+}
