@@ -78,11 +78,11 @@
             <form enctype="multipart/form-data" action="/projects/university_saturdays/register" method="POST"
                   class="centered">
                 {% csrf_token %}
-                <input name="name" class="form-control" placeholder="ФИО">
-                <input name="email" class="form-control" placeholder="Email" type="email">
-                <input name="school" class="form-control" placeholder="Школа">
-                <input name="grade" class="form-control" placeholder="Класс">
-                <input name="phone" class="form-control" placeholder="Телефон">
+                <input name="nameField" class="form-control" placeholder="ФИО">
+                <input name="emailField" class="form-control" placeholder="Email" type="email">
+                <input name="schoolField" class="form-control" placeholder="Школа">
+                <input name="gradeField" class="form-control" placeholder="Класс">
+                <input name="phoneField" class="form-control" placeholder="Телефон">
                 <input id="eventId" name="eventId" hidden>
                 <button class="btn btn-primary submit" type="submit">Зарегистрироваться</button>
                 <button class="btn btn-primary submit close-button">Закрыть</button>

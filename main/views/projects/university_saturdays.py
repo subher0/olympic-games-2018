@@ -39,9 +39,15 @@ def signup_for_event(request):
     if request.method == 'POST':
         form = EventSignupForm(request.POST)
         if form.is_valid():
+            event = Event.objects.getById(form.cleaned_data['eventId'])
+            if event.currentlyRegistered >= event.maximumCapacity:
+                return redirect('/')
+            event.currentlyRegistered += 1
+            event.university.rating += 1
+            event.save()
             Pupil.objects.createPupil(form.cleaned_data['nameField'], form.cleaned_data['phoneField'],
                                       form.cleaned_data['emailField'], form.cleaned_data['schoolField'],
-                                      form.cleaned_data['gradeField'])
+                                      form.cleaned_data['gradeField'], event)
             return redirect('/')
 
     context = {

@@ -21,6 +21,13 @@ class EventManager(models.Manager):
             result = None
         return result
 
+    def getById(self, id):
+        try:
+            result = self.get(id=id)
+        except Exception:
+            result = None
+        return result
+
 
 class Subject(models.Model):
     subject = models.CharField(verbose_name='Subject', max_length=30)
