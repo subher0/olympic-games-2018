@@ -25,6 +25,7 @@ class Chump(models.Model):
     about_short = models.TextField(verbose_name='Very brief description', max_length=128, default='Good guy and all')
     about = models.TextField(verbose_name='About')
     specialty = models.TextField(verbose_name='Specialty')
+    university = models.TextField(verbose_name='University', default='ДГУ')
     image = models.ImageField(verbose_name='news image', default='no_image.png', upload_to=make_filepath)
     objects = ChumpManager()
 

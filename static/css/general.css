@@ -497,7 +497,7 @@ a, a:hover, a:focus {
 /*## HELPER SELECTORS ##*/
 .roboto {
     font-family: "Roboto", sans-serif !important;
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 
 .hidden {

@@ -3,7 +3,7 @@
         <img class="card-img-top" src="/media/{{ news_item.image }}" alt="Card image cap">
     </div>
     <div class="card-block">
-        <h2 class="card-title">{{ news_item.title }}</h2>
+        <h3 class="card-title">{{ news_item.title }}</h3>
         <p class="card-text">{{ news_item.short_text }}</p>
         <p class="text-muted">{{ news_item.date|date:'H:i d.m.Y' }}</p>
         <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ news_item.id }}">Подробнее</button>
@@ -13,7 +13,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">{{ news_item.title }}</h2>
+                    <h3 class="modal-title">{{ news_item.title }}</h3>
                 </div>
                 <div class="modal-body">
                     <p>{{ news_item.text }}</p>
