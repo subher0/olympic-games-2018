@@ -1,0 +1,34 @@
+<div class="event-wrapper">
+    <div class="event">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{ event.title }}</h3>
+            </div>
+            <div class="col-md-3">
+                <h4>Дата проведения: {{ event.date | date:"d.m.Y" }}</h4>
+                <h4>Время проведения: {{ event.date | date:"H:i" }}</h4>
+                <h4>ВУЗ: {{ event.university.name }}</h4>
+            </div>
+            <div class="col-md-6">
+                <h4>Предмет: {{ event.subject.subject }}</h4>
+            </div>
+            <div class="col-md-3">
+                <h4>Тип мероприятия: {{ event.type }}</h4>
+                <h4>Аудитория:
+                {% for auditory in event.auditory.all %}
+                    {{ auditory.auditory }}
+                {% endfor %}
+                </h4>
+            </div>
+            <div class="col-md-12">
+                <h5 class="centered">
+                    Зарегистрировано: {{ event.currentlyRegistered }} / {{ event.maximumCapacity }}
+                </h5>
+            </div>
+            <div class="col-12 centered">
+                <button class="btn btn-primary reg-button" id="{{ event.id }}">Зарегистрироваться</button>
+                <button class="btn btn-primary info-button">Подробнее</button>
+            </div>
+        </div>
+    </div>
+</div>

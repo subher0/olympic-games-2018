@@ -500,6 +500,14 @@ a, a:hover, a:focus {
     font-weight: 100;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.centered {
+    text-align: center !important;
+}
+
 .vertical-center {
   margin-top: 30px;
 }

@@ -21,6 +21,7 @@ class University(models.Model):
     name = models.TextField(verbose_name='Name')
     about = models.TextField(verbose_name='About')
     rating = models.IntegerField(verbose_name='rating', default=0)
+    saturdayRating = models.IntegerField(verbose_name='Rating by saturdays', default=0)
     email = models.EmailField(verbose_name='Email')
     objects = UniversityManager()
 

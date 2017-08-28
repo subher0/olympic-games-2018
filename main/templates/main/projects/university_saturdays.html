@@ -9,13 +9,77 @@
 
 {% block scripts %}
     <script src="/static/projects/university_saturdays/saturdays_script.js"></script>
-    <script src="/static/third_party/calendar/daterangepicker.js"></script>
     <script src="/static/third_party/calendar/moment.min.js"></script>
+    <script src="/static/third_party/calendar/daterangepicker.js"></script>
 {% endblock scripts %}
 
 {% block project-title %}Университетские Субботы{% endblock %}
 
 {% block project-content %}
-{% csrf_token %}
+    <div class="container">
+        <form enctype="application/x-www-form-urlencoded" action="projects/university_saturdays/search" method="GET">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-3">
+                    <input class="rangePicker form-control" name="date_range" type="text" placeholder="">
+                </div>
+                <div class="col-md-3">
+                    <select class="custom-select form-control" name="university">
+                        <option selected>ВУЗ</option>
+                        {% for university in universities %}
+                            <option value="{{ university.id }}">{{ university.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="custom-select form-control" name="auditory">
+                        <option selected>Аудитория</option>
+                        {% for auditory in auditories %}
+                            <option value="{{ auditory.id }}">{{ auditory.auditory }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select class="custom-select form-control" name="eventType">
+                        <option selected>Вид мероприятия</option>
+                        {% for type in types %}
+                            <option value="{{ type.id }}">{{ type.type }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select class="custom-select form-control" name="subject">
+                        <option selected>Предмет</option>
+                        {% for subject in subjects %}
+                            <option value="{{ subject.id }}">{{ subject.subject }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-1 centered">
+                    <button type="submit" class="btn btn-primary search-button">Найти</button>
+                </div>
+            </div>
+        </form>
 
+        {% for event in events %}
+            {% include "main/elements/eventT.html" %}
+        {% endfor %}
+    </div>
+
+    <div class="registration-form-wrapper hidden">
+        <div class="registration-form">
+            <form enctype="multipart/form-data" action="/projects/university_saturdays/register" method="POST"
+                  class="centered">
+                {% csrf_token %}
+                <input name="name" class="form-control" placeholder="ФИО">
+                <input name="email" class="form-control" placeholder="Email" type="email">
+                <input name="school" class="form-control" placeholder="Школа">
+                <input name="grade" class="form-control" placeholder="Класс">
+                <input name="phone" class="form-control" placeholder="Телефон">
+                <input id="eventId" name="eventId" hidden>
+                <button class="btn btn-primary submit" type="submit">Зарегистрироваться</button>
+                <button class="btn btn-primary submit close-button">Закрыть</button>
+            </form>
+        </div>
+    </div>
 {% endblock project-content %}

@@ -8,10 +8,6 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.centered {
-    text-align: center;
-}
-
 /* Links */
 .header-section {
     background: url(/static/img/2.jpg) repeat-x;
