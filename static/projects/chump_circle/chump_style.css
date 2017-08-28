@@ -2,10 +2,14 @@
     color: var(--background-color);
 }
 
+.header-section h4 {
+    color: white;
+}
+
 .chump-wrapper {
     position: relative;
     padding: 10px;
-    height: 540px;
+    height: 620px;
 }
 
 .chump {
@@ -23,9 +27,16 @@
 }
 
 .chump button {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.chump .button-section {
     position: absolute;
-    bottom: 10px;
-    right: 15px;
+    bottom: 70px;
+    height: 20px;
+    width: 90%;
+    left: 5%;
     cursor: pointer;
 }
 
@@ -52,6 +63,16 @@
     top: 210px;
     left: 3%;
     height: 50px;
+    width: 95%;
+    overflow: hidden;
+}
+
+.chump-university {
+    color: var(--font-color-l2);
+    position: absolute;
+    top: 265px;
+    left: 3%;
+    height: 30px;
     width: 95%;
     overflow: hidden;
 }
@@ -111,4 +132,5 @@
 .modal-footer button:hover {
     box-shadow: 0 1px 0 var(--font-color);
 }
+
 /*## MODAL ADJUSTMENT ##*/

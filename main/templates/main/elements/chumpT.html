@@ -6,8 +6,22 @@
                 <div class="chump-name"><h3>{{ chump.name }}</h3></div>
                 <div class="chump-about"><h4>{{ chump.about_short }}</h4></div>
                 <div class="chump-specialty"><h4>Предметы: {{ chump.specialty }}</h4></div>
+                <div class="chump-university"><h4>ВУЗ: {{ chump.university }}</h4></div>
             </div>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ chump.id }}">Подробнее</button>
+            <div class="button-section">
+                <div class="row">
+                    <div class="col-md-12 centered">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#u{{ chump.id }}">
+                            Подробнее
+                        </button>
+                    </div>
+                    <div class="col-md-12 centered">
+                        <button class="btn btn-primary invite-button">
+                            Пригласить чемпиона
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="u{{ chump.id }}" class="modal fade" role="dialog">

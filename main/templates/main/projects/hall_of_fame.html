@@ -2,6 +2,13 @@
 
 {% block title %} Зал славы {% endblock %}
 
+{% block project-description %}
+    <h4>
+        Доска почёта с именами тех, чьи заслуги не остались незамеченными на российском и международном уровнях, чьи
+        успехи внесли весомый вклад в развитие олимпиадного движения и имиджа образования Дагестана
+    </h4>
+{% endblock project-description %}
+
 {% block styles %}
     <link href="/static/projects/hall_of_fame/hall_style.css" rel="stylesheet">
 {% endblock styles %}
@@ -14,8 +21,8 @@
 
 {% block project-content %}
     <div class="container">
-            {% for famousOne in famousOnes %}
-                {% include "main/elements/famousOneT.html" %}
-            {% endfor %}
+        {% for famousOne in famousOnes %}
+            {% include "main/elements/famousOneT.html" %}
+        {% endfor %}
     </div>
 {% endblock project-content %}
