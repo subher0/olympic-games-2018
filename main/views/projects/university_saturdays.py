@@ -104,39 +104,37 @@ def signup_for_event(request):
 
 
 def eventSearch(request):
-    form = EventSearchForm()
+    form = None
     error_message = ''
-    success_message = 'Вы успешно зарегестрировались на событие!'
+    events = None
     if request.method == 'GET':
-        form = EventSignupForm(request.POST)
+        form = EventSearchForm(request.GET)
         if form.is_valid():
-            event = Event.objects.getById(form.cleaned_data['eventId'])
-            if event.currentlyRegistered > event.maximumCapacity or event.isClosed:
-                error_message = 'К сожалению, регистрация уже закрыта.'
-            elif event.currentlyRegistered == event.maximumCapacity:
-                # Send message when full
-                send_email_to_university_and_save(event)
-            else:
-                event.currentlyRegistered += 1
-                event.university.rating += 1
-                event.university.save()
-                Pupil.objects.createPupil(form.cleaned_data['nameField'], form.cleaned_data['phoneField'],
-                                          form.cleaned_data['emailField'], form.cleaned_data['schoolField'],
-                                          form.cleaned_data['gradeField'], event)
-                event.save()
+            university = form.cleaned_data['university']
+            subject = form.cleaned_data['subject']
+            eventType = form.cleaned_data['eventType']
+            auditory = form.cleaned_data['auditory']
+            events = Event.objects.all()
+
+            if university != 0:
+                events = events.filter(university__id=university)
+            elif subject != 0:
+                events = events.filter(subject__id=subject)
+            elif eventType != 0:
+                events = events.filter(type__id=eventType)
+            elif auditory != 0:
+                events = events.filter(auditory__id=auditory)
+
+            events = events.order_by('date')
         else:
             error_message = 'Ошибки в полях формы'
     else:
         error_message = 'Неподдерживаемый тип запроса'
 
-    if error_message == '':
-        return redirect('/projects/university_saturdays?success_message=%s' % success_message)
-
     types = EventType.objects.all()
     auditories = Auditory.objects.all()
     subjects = Subject.objects.all()
-    univesities = University.objects.getAllUniversities()
-    events = Event.objects.getAllEvents()
+    universities = University.objects.getAllUniversities()
 
     context = {
         'error_message': error_message,
@@ -145,7 +143,7 @@ def eventSearch(request):
         'types': types,
         'auditories': auditories,
         'subjects': subjects,
-        'universities': univesities,
+        'universities': universities,
     }
 
     try:

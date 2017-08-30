@@ -24,41 +24,49 @@
 
 {% block project-content %}
     <div class="container">
-        <form enctype="application/x-www-form-urlencoded" action="projects/university_saturdays/search" method="GET">
+        <form enctype="application/x-www-form-urlencoded" action="/projects/university_saturdays/search" method="GET">
             {% csrf_token %}
             <div class="row">
                 <div class="col-md-3">
-                    <input class="rangePicker form-control" name="date_range" type="text" placeholder="">
+                    <input class="rangePicker form-control" name="dateRange" type="text" placeholder="">
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control" name="university">
-                        <option selected>ВУЗ</option>
+                        <option {% if not form.university %} selected {% endif %} value="0">ВУЗ</option>
                         {% for university in universities %}
-                            <option value="{{ university.id }}">{{ university.name }}</option>
+                            <option {% if form.university.value == university.id %} selected {% endif %}
+                                                                              value="{{ university.id }}">{{ university.name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control" name="auditory">
-                        <option selected>Аудитория</option>
+                        <option {% if not form.auditory %} selected {% endif %} value="0">Аудитория</option>
                         {% for auditory in auditories %}
-                            <option value="{{ auditory.id }}">{{ auditory.auditory }}</option>
+                            <option {% if form.auditory.value == auditory.id %} selected {% endif %}
+                                                                          value="{{ auditory.id }}">{{ auditory.name }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control" name="eventType">
-                        <option selected>Вид мероприятия</option>
+                        <option {% if not form.eventType %} selected {% endif %} value="0">Вид мероприятия</option>
                         {% for type in types %}
-                            <option value="{{ type.id }}">{{ type.type }}</option>
+                            <option {% if form.eventType.value == type.id %} selected {% endif %}
+                                                                      value="{{ type.id }}">{{ type.type }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-6">
                     <select class="custom-select form-control" name="subject">
-                        <option selected>Предмет</option>
+                        <option {% if not form.subject %} selected {% endif %} value="0">Предмет</option>
                         {% for subject in subjects %}
-                            <option value="{{ subject.id }}">{{ subject.subject }}</option>
+                            <option {% if form.subject.value == subject.id %} selected {% endif %}
+                                                                          value="{{ subject.id }}">{{ subject.subject }}
+                            </option>
                         {% endfor %}
                     </select>
                 </div>
@@ -67,7 +75,7 @@
                 </div>
             </div>
         </form>
-        {% if error_message == '' %}
+        {% if error_message == '' or not error_message %}
             <h3 class="success-message">{{ success_message }}</h3>
         {% else %}
             <h3 class="error-message">{{ error_message }}</h3>

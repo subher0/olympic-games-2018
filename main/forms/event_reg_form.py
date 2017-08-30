@@ -9,9 +9,10 @@ class EventSignupForm(forms.Form):
     gradeField = forms.IntegerField(label='grade')
     eventId = forms.IntegerField(label='eventId')
 
+
 class EventSearchForm(forms.Form):
-    dateRange = forms.CharField(max_length='20')
-    university = forms.CharField(max_length='20')
-    auditory = forms.CharField(max_length='20')
-    eventType = forms.CharField(max_length='20')
-    subject = forms.CharField(max_length='20')
+    dateRange = forms.CharField(label='date range', max_length=40)
+    university = forms.IntegerField(label='university')
+    auditory = forms.IntegerField(label='auditory')
+    eventType = forms.IntegerField(label='event type')
+    subject = forms.IntegerField(label='subject')

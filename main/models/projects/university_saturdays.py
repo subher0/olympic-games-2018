@@ -35,7 +35,6 @@ class EventManager(models.Manager):
             result = None
         return result
 
-
 class Subject(models.Model):
     subject = models.CharField(verbose_name='Subject', max_length=30)
 

@@ -20,5 +20,5 @@ urlpatterns = [
     url(r'^projects/journey_to_dream$', journey_to_dream.journey_to_dream_view, name='journey_to_dream'),
     url(r'^projects/elective$', elective.elective_view, name='elective'),
     url(r'^projects/university_saturdays/register$', university_saturdays.signup_for_event, name='Sign up for event'),
-    url(r'^projects/university_saturdays/search$', university_saturdays.eventsSearch, name='Search for event')
+    url(r'^projects/university_saturdays/search$', university_saturdays.eventSearch, name='Search for event')
 ]
