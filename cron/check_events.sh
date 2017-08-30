@@ -1,3 +1,2 @@
-. /etc/profile
-cd /home/farid/Desktop/Workspace/work/olympic_games/
+cd $OLIMP_HOME_DIR/cron
 python3 manage.py event_checker > ./cron/cron.log

@@ -1,1 +1,1 @@
-*/10 * * * * /home/farid/Desktop/Workspace/work/olympic_games/cron/check_events.sh
+*/10 * * * * . /etc/profile && $OLIMP_HOME_DIR/cron/check_events.sh
