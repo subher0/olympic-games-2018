@@ -9,6 +9,8 @@ from main.models import Chump, Pupil
 from main.models.projects.university_saturdays import Event, EventType, Auditory, Subject
 from main.models.university import University
 
+from datetime import datetime
+
 
 def university_saturdays_view(request):
     events = Event.objects.getAllEvents()
@@ -103,6 +105,19 @@ def signup_for_event(request):
     return HttpResponse(template.render(context, request))
 
 
+# returns list with start and end date in datetime
+def getStartEndDate(dateString, separator):
+    dates = dateString.split(separator)
+    dateList = []
+    for date in dates:
+        numbers = date.split('/')
+        day = int(numbers[0])
+        month = int(numbers[1])
+        year = int(numbers[2])
+        dateList.append(datetime(year=year, month=month, day=day))
+    return dateList
+
+
 def eventSearch(request):
     form = None
     error_message = ''
@@ -110,22 +125,25 @@ def eventSearch(request):
     if request.method == 'GET':
         form = EventSearchForm(request.GET)
         if form.is_valid():
+            datelist = getStartEndDate(form.cleaned_data['dateRange'], ' - ')
             university = form.cleaned_data['university']
             subject = form.cleaned_data['subject']
             eventType = form.cleaned_data['eventType']
             auditory = form.cleaned_data['auditory']
             events = Event.objects.all()
 
+            if len(datelist) == 2:
+                events = events.filter(date__gte=datelist[0], date__lte=datelist[1])
             if university != 0:
                 events = events.filter(university__id=university)
-            elif subject != 0:
+            if subject != 0:
                 events = events.filter(subject__id=subject)
-            elif eventType != 0:
+            if eventType != 0:
                 events = events.filter(type__id=eventType)
-            elif auditory != 0:
+            if auditory != 0:
                 events = events.filter(auditory__id=auditory)
 
-            events = events.order_by('date')
+            events = events.order_by('date').reverse()
         else:
             error_message = 'Ошибки в полях формы'
     else:
@@ -138,7 +156,7 @@ def eventSearch(request):
 
     context = {
         'error_message': error_message,
-        'form': form,
+        'form': form.cleaned_data,
         'events': events,
         'types': types,
         'auditories': auditories,

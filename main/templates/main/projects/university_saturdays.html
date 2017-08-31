@@ -28,13 +28,15 @@
             {% csrf_token %}
             <div class="row">
                 <div class="col-md-3">
-                    <input class="rangePicker form-control" name="dateRange" type="text" placeholder="">
+                    <input class="rangePicker form-control" name="dateRange" type="text"
+                    {% if form.dateRange %} value="{{ form.dateRange }}"
+                    {% else %} placeholder="Интервал" {% endif %}>
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control" name="university">
                         <option {% if not form.university %} selected {% endif %} value="0">ВУЗ</option>
                         {% for university in universities %}
-                            <option {% if form.university.value == university.id %} selected {% endif %}
+                            <option {% if form.university == university.id %} selected {% endif %}
                                                                               value="{{ university.id }}">{{ university.name }}
                             </option>
                         {% endfor %}
@@ -44,8 +46,8 @@
                     <select class="custom-select form-control" name="auditory">
                         <option {% if not form.auditory %} selected {% endif %} value="0">Аудитория</option>
                         {% for auditory in auditories %}
-                            <option {% if form.auditory.value == auditory.id %} selected {% endif %}
-                                                                          value="{{ auditory.id }}">{{ auditory.name }}
+                            <option {% if form.auditory == auditory.id %} selected {% endif %}
+                                                                          value="{{ auditory.id }}">{{ auditory.auditory }}
                             </option>
                         {% endfor %}
                     </select>
@@ -54,7 +56,7 @@
                     <select class="custom-select form-control" name="eventType">
                         <option {% if not form.eventType %} selected {% endif %} value="0">Вид мероприятия</option>
                         {% for type in types %}
-                            <option {% if form.eventType.value == type.id %} selected {% endif %}
+                            <option {% if form.eventType == type.id %} selected {% endif %}
                                                                       value="{{ type.id }}">{{ type.type }}
                             </option>
                         {% endfor %}
@@ -64,7 +66,7 @@
                     <select class="custom-select form-control" name="subject">
                         <option {% if not form.subject %} selected {% endif %} value="0">Предмет</option>
                         {% for subject in subjects %}
-                            <option {% if form.subject.value == subject.id %} selected {% endif %}
+                            <option {% if form.subject == subject.id %} selected {% endif %}
                                                                           value="{{ subject.id }}">{{ subject.subject }}
                             </option>
                         {% endfor %}
