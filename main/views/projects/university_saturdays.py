@@ -107,12 +107,16 @@ def getStartEndDate(dateString, separator):
     if len(dates) != 2:
         return []
     dateList = []
+    hour = 0
+    minute = 0
     for date in dates:
         numbers = date.split('/')
         day = int(numbers[0])
         month = int(numbers[1])
         year = int(numbers[2])
-        dateList.append(datetime(year=year, month=month, day=day))
+        dateList.append(datetime(year=year, month=month, day=day, hour=hour, minute=minute))
+        hour = 23
+        minute = 59
     return dateList
 
 
