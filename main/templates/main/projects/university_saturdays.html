@@ -23,14 +23,15 @@
 {% block project-title %}Университетские Субботы{% endblock %}
 
 {% block project-content %}
+
     <div class="container">
         <form enctype="application/x-www-form-urlencoded" action="/projects/university_saturdays/search" method="GET">
             {% csrf_token %}
             <div class="row">
                 <div class="col-md-3">
                     <input class="rangePicker form-control" name="dateRange" type="text"
-                    {% if form.dateRange %} value="{{ form.dateRange }}"
-                    {% else %} placeholder="Интервал" {% endif %}>
+                            {% if form.dateRange %} value="{{ form.dateRange }}"
+                            {% else %} placeholder="Интервал" {% endif %}>
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control" name="university">
@@ -57,26 +58,18 @@
                         <option {% if not form.eventType %} selected {% endif %} value="0">Вид мероприятия</option>
                         {% for type in types %}
                             <option {% if form.eventType == type.id %} selected {% endif %}
-                                                                      value="{{ type.id }}">{{ type.type }}
+                                                                       value="{{ type.id }}">{{ type.type }}
                             </option>
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-md-6">
-                    <select class="custom-select form-control" name="subject">
-                        <option {% if not form.subject %} selected {% endif %} value="0">Предмет</option>
-                        {% for subject in subjects %}
-                            <option {% if form.subject == subject.id %} selected {% endif %}
-                                                                          value="{{ subject.id }}">{{ subject.subject }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col-md-1 centered">
+                <div class="col-12 centered">
                     <button type="submit" class="btn btn-primary search-button">Найти</button>
                 </div>
             </div>
         </form>
+    </div>
+    <div class="container-fluid">
         {% if error_message == '' or not error_message %}
             <h3 class="success-message">{{ success_message }}</h3>
         {% else %}

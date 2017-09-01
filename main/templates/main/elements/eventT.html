@@ -10,13 +10,25 @@
                 <h4>ВУЗ: {{ event.university.name }}</h4>
             </div>
             <div class="col-md-6">
-                <h4>Предмет: {{ event.subject.subject }}</h4>
+                <h5>{{ event.description }}</h5>
+                <h4>Адрес: {{ event.location }}</h4>
             </div>
             <div class="col-md-3">
-                <h4>Тип мероприятия: {{ event.type }}</h4>
+                <h4>Тип мероприятия:
+                    {% for type in event.types.all %}
+                        {% if not forloop.last %}
+                            {{ type.type }},
+                        {% else %}
+                            {{ type.type }}
+                        {% endif %}
+                    {% endfor %} </h4>
                 <h4>Аудитория:
                     {% for auditory in event.auditory.all %}
-                        {{ auditory.auditory }}
+                        {% if not forloop.last %}
+                            {{ auditory.auditory }},
+                        {% else %}
+                            {{ auditory.auditory }}
+                        {% endif %}
                     {% endfor %}
                 </h4>
             </div>
@@ -27,7 +39,6 @@
             </div>
             <div class="col-12 centered">
                 <button class="btn btn-primary reg-button" id="{{ event.id }}">Зарегистрироваться</button>
-                <button class="btn btn-primary info-button">Подробнее</button>
             </div>
         </div>
         {% if event.currentlyRegistered == event.maximumCapacity or event.isClosed %}

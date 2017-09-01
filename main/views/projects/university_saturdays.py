@@ -16,7 +16,6 @@ def university_saturdays_view(request):
     events = Event.objects.getAllEvents()
     types = EventType.objects.all()
     auditories = Auditory.objects.all()
-    subjects = Subject.objects.all()
     univesities = University.objects.getAllUniversities()
     success_message = ''
     try:
@@ -28,7 +27,6 @@ def university_saturdays_view(request):
         'events': events,
         'types': types,
         'auditories': auditories,
-        'subjects': subjects,
         'universities': univesities,
         'success_message': success_message
     }
@@ -85,7 +83,6 @@ def signup_for_event(request):
 
     types = EventType.objects.all()
     auditories = Auditory.objects.all()
-    subjects = Subject.objects.all()
     univesities = University.objects.getAllUniversities()
 
     context = {
@@ -94,7 +91,6 @@ def signup_for_event(request):
         'events': events,
         'types': types,
         'auditories': auditories,
-        'subjects': subjects,
         'universities': univesities,
     }
 
@@ -108,6 +104,8 @@ def signup_for_event(request):
 # returns list with start and end date in datetime
 def getStartEndDate(dateString, separator):
     dates = dateString.split(separator)
+    if len(dates) != 2:
+        return []
     dateList = []
     for date in dates:
         numbers = date.split('/')
@@ -127,7 +125,6 @@ def eventSearch(request):
         if form.is_valid():
             datelist = getStartEndDate(form.cleaned_data['dateRange'], ' - ')
             university = form.cleaned_data['university']
-            subject = form.cleaned_data['subject']
             eventType = form.cleaned_data['eventType']
             auditory = form.cleaned_data['auditory']
             events = Event.objects.all()
@@ -136,10 +133,8 @@ def eventSearch(request):
                 events = events.filter(date__gte=datelist[0], date__lte=datelist[1])
             if university != 0:
                 events = events.filter(university__id=university)
-            if subject != 0:
-                events = events.filter(subject__id=subject)
             if eventType != 0:
-                events = events.filter(type__id=eventType)
+                events = events.filter(types__id=eventType)
             if auditory != 0:
                 events = events.filter(auditory__id=auditory)
 
@@ -151,7 +146,6 @@ def eventSearch(request):
 
     types = EventType.objects.all()
     auditories = Auditory.objects.all()
-    subjects = Subject.objects.all()
     universities = University.objects.getAllUniversities()
 
     context = {
@@ -160,7 +154,6 @@ def eventSearch(request):
         'events': events,
         'types': types,
         'auditories': auditories,
-        'subjects': subjects,
         'universities': universities,
     }
 

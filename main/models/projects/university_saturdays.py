@@ -9,14 +9,14 @@ from main.models.utils import make_filepath
 class EventManager(models.Manager):
     def getAllEvents(self):
         try:
-            result = self.order_by('id').reverse()
+            result = self.order_by('date').reverse()
         except Exception:
             result = None
         return result
 
     def getSomeEvents(self, amount):
         try:
-            result = self.order_by('id').reverse()[:amount]
+            result = self.order_by('date').reverse()[:amount]
         except Exception:
             result = None
         return result
@@ -34,6 +34,7 @@ class EventManager(models.Manager):
         except Exception:
             result = None
         return result
+
 
 class Subject(models.Model):
     subject = models.CharField(verbose_name='Subject', max_length=30)
@@ -90,13 +91,14 @@ class Event(models.Model):
     old_university = None
     date = models.DateTimeField(verbose_name='Date', default=now)
     title = models.TextField(verbose_name='Title')
+    location = models.TextField(verbose_name='Address', max_length=255, default='N/A')
     description = models.TextField(verbose_name='Description')
     maximumCapacity = models.IntegerField(verbose_name='Maximum capacity')
     currentlyRegistered = models.IntegerField(verbose_name='Currently registered', editable=False, default=0)
     university = models.ForeignKey(University, verbose_name='University')
     auditory = models.ManyToManyField(Auditory, verbose_name='Auditory')
-    type = models.ForeignKey(EventType, verbose_name='Event type', default=event_default)
-    subject = models.ForeignKey(Subject, verbose_name='Subject', default=subject_default)
+    types = models.ManyToManyField(EventType, verbose_name='Event type')
+    subject = models.ForeignKey(Subject, verbose_name='Subject', default=subject_default, editable=False)
     isClosed = models.BooleanField(verbose_name='Registration closed', default=False)
     image = models.ImageField(verbose_name='news image', default='no_image.png', upload_to=make_filepath)
     objects = EventManager()
