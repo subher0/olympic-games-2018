@@ -124,8 +124,8 @@ USE_TZ = True
 EMAIL_HOST = os.environ.get('OLIMP_EMAIL_HOST')
 EMAIL_HOST_USER = os.environ.get('OLIMP_EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('OLIMP_EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
-EMAIL_PORT = '587'
+EMAIL_USE_SSL = True
+EMAIL_PORT = '465'
 
 
 # Static files (CSS, JavaScript, Images)
