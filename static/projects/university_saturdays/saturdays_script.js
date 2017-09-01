@@ -10,13 +10,13 @@ window.addEventListener('load', () => {
             "customRangeLabel": "Свой",
             "weekLabel": "Нд",
             "daysOfWeek": [
+                "Вс",
                 "Пн",
                 "Вт",
                 "Ср",
                 "Чт",
                 "Пт",
                 "Сб",
-                "Вс"
             ],
             "monthNames": [
                 "Январь",
@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
                 "Ноябрь",
                 "Декабрь"
             ],
-            "firstDay": 0
+            "firstDay": 1
         },
     }, function (start, end, label) {
         console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
