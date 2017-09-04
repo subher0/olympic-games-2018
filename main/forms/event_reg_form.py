@@ -11,7 +11,5 @@ class EventSignupForm(forms.Form):
 
 
 class EventSearchForm(forms.Form):
-    dateRange = forms.CharField(label='date range', max_length=40, required=False)
     university = forms.IntegerField(label='university')
     auditory = forms.IntegerField(label='auditory')
-    eventType = forms.IntegerField(label='event type')

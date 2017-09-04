@@ -14,7 +14,6 @@ from datetime import datetime
 
 def university_saturdays_view(request):
     events = Event.objects.getAllEvents()
-    types = EventType.objects.all()
     auditories = Auditory.objects.all()
     univesities = University.objects.getAllUniversities()
     success_message = ''
@@ -25,7 +24,6 @@ def university_saturdays_view(request):
 
     context = {
         'events': events,
-        'types': types,
         'auditories': auditories,
         'universities': univesities,
         'success_message': success_message
@@ -81,7 +79,6 @@ def signup_for_event(request):
     if error_message == '':
         return redirect('/projects/university_saturdays?success_message=%s' % success_message)
 
-    types = EventType.objects.all()
     auditories = Auditory.objects.all()
     univesities = University.objects.getAllUniversities()
 
@@ -89,7 +86,6 @@ def signup_for_event(request):
         'error_message': error_message,
         'form': form,
         'events': events,
-        'types': types,
         'auditories': auditories,
         'universities': univesities,
     }
@@ -127,18 +123,11 @@ def eventSearch(request):
     if request.method == 'GET':
         form = EventSearchForm(request.GET)
         if form.is_valid():
-            datelist = getStartEndDate(form.cleaned_data['dateRange'], ' - ')
             university = form.cleaned_data['university']
-            eventType = form.cleaned_data['eventType']
             auditory = form.cleaned_data['auditory']
             events = Event.objects.all()
-
-            if len(datelist) == 2:
-                events = events.filter(date__gte=datelist[0], date__lte=datelist[1])
             if university != 0:
                 events = events.filter(university__id=university)
-            if eventType != 0:
-                events = events.filter(types__id=eventType)
             if auditory != 0:
                 events = events.filter(auditory__id=auditory)
 
@@ -156,7 +145,6 @@ def eventSearch(request):
         'error_message': error_message,
         'form': form.cleaned_data,
         'events': events,
-        'types': types,
         'auditories': auditories,
         'universities': universities,
     }
