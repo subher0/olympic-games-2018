@@ -63,11 +63,11 @@ window.addEventListener('load', () => {
             request.setRequestHeader('X-CSRFToken', getCookie('csrftoken'));
             request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
             request.send(JSON.stringify(payload));
+            alert('Спасибо за отзыв!');
         });
         response.then((response) => {
-            alert('Спасибо за отзыв!');
+            console.log(response);
         }).catch((response) => {
-            alert('Что-то пошло не так!');
             console.log(response);
         });
     })
