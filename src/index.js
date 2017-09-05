@@ -47,23 +47,23 @@ function hoverOnMobiles() {
     let clickedId;
     let prevClickedId = '';
     if (screen.width < 992) {
-        circles.forEach((element) => {
-            element.addEventListener('click', (event) => {
+        for (let i = 0; i < circles.length; i++) {
+            circles[i].addEventListener('click', (event) => {
                 event.stopPropagation();
-                clickedId = element.getAttribute('class');
+                clickedId = circles[i].getAttribute('class');
                 if (clickedId === prevClickedId) {
-                    window.location = element.getAttribute('href');
+                    window.location = circles[i].getAttribute('href');
                 } else {
                     prevClickedId = clickedId;
                 }
             });
-        });
+        }
     } else {
-        circles.forEach((element) => {
-            element.addEventListener('click', (event) => {
-                window.location = element.getAttribute('href');
+        for (let i = 0; i < circles.length; i++) {
+            circles[i].addEventListener('click', (event) => {
+                window.location = circles[i].getAttribute('href');
             });
-        });
+        }
     }
 
     window.addEventListener('click', () => prevClickedId = '');

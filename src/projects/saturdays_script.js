@@ -7,10 +7,10 @@ window.addEventListener('load', () => {
         reg_window.setAttribute('class', 'registration-form-wrapper hidden');
     });
 
-    reg_buttons.forEach((item) => {
-        item.addEventListener('click', (event) => {
+    for (let i = 0; i < reg_buttons.length; i++) {
+        reg_buttons[i].addEventListener('click', (event) => {
             reg_window.setAttribute('class', 'registration-form-wrapper');
             document.getElementById('eventId').setAttribute('value', item.id);
-        })
-    });
+        });
+    }
 });

@@ -55,6 +55,9 @@ fabric.properties
 *.log
 *.pot
 
+#NPM
+node_modules
+
 #OTHERS
 dumps
 media
@@ -62,3 +65,4 @@ media
 *.old
 .remote-sync.json
 stress_test
+static/js
