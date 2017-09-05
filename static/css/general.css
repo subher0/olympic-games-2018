@@ -37,6 +37,7 @@
     color: var(--background-color-d4);
     text-decoration: underline;
 }
+
 /*## FOOTER STYLING ##*/
 /*****************************************************************************************************/
 /*** NAVBAR STYLING ***/
@@ -461,8 +462,9 @@ a, a:hover, a:focus {
 }
 
 .fa.fa-vk, .fa.fa-instagram, .fa.fa-facebook-official {
-  margin-top: 10px;
+    margin-top: 10px;
 }
+
 /*## ICONS ##*/
 /**********************************************************************************/
 /*** HEADER WITH BACKGROUND ***/
@@ -492,9 +494,42 @@ a, a:hover, a:focus {
     padding-left: 0;
     padding-right: 0;
 }
+
 /*## HEADER WITH BACKGROUND ##*/
 /*****************************************************************************************************/
-/*## HELPER SELECTORS ##*/
+/*** FEEDBACK ***/
+.feedback-wrapper {
+    position: fixed;
+    top: 120px;
+    left: 5%;
+    height: 60%;
+    width: 90%;
+}
+
+.feedback {
+    padding: 10px;
+    background-color: var(--background-color-d3);
+    border-radius: 10px;
+}
+
+.feedback * {
+    margin-bottom: 5px;
+}
+
+.feedback-button {
+    background-color: var(--background-color-d1);
+    color: var(--font-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.feedback-button:hover {
+    background-color: var(--font-color-l4);
+}
+
+/*## FEEDBACK ##*/
+/*****************************************************************************************************/
+/*** HELPER SELECTORS ***/
 .roboto {
     font-family: "Roboto", sans-serif !important;
     font-weight: 100 !important;
@@ -502,6 +537,7 @@ a, a:hover, a:focus {
 
 .hidden {
     visibility: hidden;
+    display: none;
 }
 
 .centered {
@@ -509,12 +545,13 @@ a, a:hover, a:focus {
 }
 
 .vertical-center {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .inline-flex {
-  display: inline-flex;
+    display: inline-flex;
 }
+
 /*## HELPER SELECTORS ##*/
 /*****************************************************************************************************/
 /*** OTHER ***/
