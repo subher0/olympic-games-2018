@@ -7,6 +7,19 @@ from main.models.utils import make_filepath
 
 
 class EventManager(models.Manager):
+    def createEvent(self, date, title, location, description, maximumCapacity, university, auditory, types):
+        if description is None:
+            description = ''
+        event = Event(date=date, title=title, location=location, description=description,
+                      maximumCapacity=maximumCapacity, university=university)
+        event.save()
+        for auditory_item in auditory:
+            event.auditory.add(auditory_item)
+
+        for type in types:
+            event.types.add(type)
+        event.save()
+
     def getAllEvents(self):
         try:
             result = self.order_by('date').reverse()
@@ -44,7 +57,7 @@ class Subject(models.Model):
 
 
 class EventType(models.Model):
-    type = models.CharField(verbose_name='Event type', max_length=30)
+    type = models.CharField(verbose_name='Event type', max_length=50)
 
     def __str__(self):
         return self.type
@@ -92,7 +105,7 @@ class Event(models.Model):
     date = models.DateTimeField(verbose_name='Date', default=now)
     title = models.TextField(verbose_name='Title')
     location = models.TextField(verbose_name='Address', max_length=255, default='N/A')
-    description = models.TextField(verbose_name='Description')
+    description = models.TextField(verbose_name='Description', default='')
     maximumCapacity = models.IntegerField(verbose_name='Maximum capacity')
     currentlyRegistered = models.IntegerField(verbose_name='Currently registered', editable=False, default=0)
     university = models.ForeignKey(University, verbose_name='University')
