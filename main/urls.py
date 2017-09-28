@@ -1,7 +1,8 @@
 from django.conf.urls import url
 
 from main.views import about_us, feedback
-from main.views.projects import chumps_circle, elective, university_saturdays, journey_to_dream, hall_of_fame
+from main.views.projects import chumps_circle, elective, university_saturdays, journey_to_dream, hall_of_fame, \
+    smart_and_smarter
 from .views import contacts
 from .views import index
 from .views import news
@@ -18,6 +19,7 @@ urlpatterns = [
     url(r'^projects/university_saturdays$', university_saturdays.university_saturdays_view,
         name='university_saturdays'),
     url(r'^projects/hall_of_fame$', hall_of_fame.hall_of_fame_view, name='hall_of_fame'),
+    url(r'^projects/smart_and_smarter$', smart_and_smarter.smart_view, name='hall_of_fame'),
     url(r'^projects/journey_to_dream$', journey_to_dream.journey_to_dream_view, name='journey_to_dream'),
     url(r'^projects/elective$', elective.elective_view, name='elective'),
     url(r'^projects/university_saturdays/register$', university_saturdays.signup_for_event, name='Sign up for event'),
