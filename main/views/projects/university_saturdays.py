@@ -53,7 +53,7 @@ def signup_for_event(request):
     form = EventSignupForm()
     events = Event.objects.getAllEvents()
     error_message = ''
-    success_message = 'Вы успешно зарегестрировались на событие!'
+    success_message = 'Вы успешно зарегистрировались на событие!'
     if request.method == 'POST':
         form = EventSignupForm(request.POST)
         if form.is_valid():

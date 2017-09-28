@@ -1,0 +1,37 @@
+{% extends "main/projects/gen_project.html" %}
+
+{% block title %} Умники и умницы {% endblock %}
+
+{% block styles %}
+    <link href="/static/css/projects/smart_and_smarter.css" rel="stylesheet">
+{% endblock styles %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock scripts %}
+
+{% block project-title %}Умники и умницы{% endblock %}
+
+{% block project-content %}
+    <div class="container">
+
+        <div class="row centered fbox">
+
+            <div class="col-md-4">
+                <div class="sas_emblem">
+                    <img class="img-fluid" src="/static/img/pop1.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="sas_text">
+                    <h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea harum, iure? A adipisci, beatae excepturi magnam molestias nam natus, nostrum omnis optio perspiciatis quas quos ullam veniam? Accusantium, ad, tempore.</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock project-content %}

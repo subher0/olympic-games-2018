@@ -26,7 +26,7 @@ SECRET_KEY = '*!%la6ogq_=krau1ukfr3s9b4nm4454jb%+zmbw$d$88o*j&41'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['37.204.2.4', 'olimp05.ru', 'www.olimp05.ru', 'dev.olimp05.ru', '127.0.0.1']
+ALLOWED_HOSTS = ['37.204.2.4', 'olimp05.ru', 'www.olimp05.ru', 'dev.olimp05.ru', '127.0.0.1', '25.80.248.164']
 
 
 # Application definition

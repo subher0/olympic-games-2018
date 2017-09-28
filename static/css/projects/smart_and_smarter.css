@@ -1,0 +1,14 @@
+.header-section h3 {
+    color: var(--background-color);
+}
+
+ .fbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.sas_text {
+    padding-bottom: 20px;
+}
