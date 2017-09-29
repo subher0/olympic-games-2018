@@ -2,14 +2,13 @@ from django import forms
 
 
 class EventSignupForm(forms.Form):
-    nameField = forms.CharField(label='name', max_length=30)
-    emailField = forms.EmailField(label='email', max_length=30)
-    phoneField = forms.RegexField(regex=r'^(\+7|8)?[\(\s-]?\d{3}[\)\s-]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$', label='phone', max_length=30)
+    nameField = forms.CharField(label='name', max_length=50)
+    emailField = forms.CharField(label='email', max_length=50)
+    phoneField = forms.CharField(label='phone', max_length=50)
     schoolField = forms.CharField(label='school', max_length=60)
-    gradeField = forms.IntegerField(label='grade')
-    eventId = forms.IntegerField(label='eventId')
+    gradeField = forms.CharField(label='grade', max_length=50)
+    eventId = forms.CharField(label='eventId', max_length=50)
 
 
 class EventSearchForm(forms.Form):
     university = forms.IntegerField(label='university')
-    auditory = forms.IntegerField(label='auditory')

@@ -15,10 +15,10 @@ class PupilManager(Manager):
 
 class Pupil(models.Model):
     name = models.CharField(verbose_name='Name', max_length=255)
-    email = models.EmailField(verbose_name='Email')
-    phone = models.CharField(verbose_name='Phone', default='Nan', max_length=20)
+    email = models.CharField(verbose_name='Email', max_length=255)
+    phone = models.CharField(verbose_name='Phone', default='Nan', max_length=255)
     school = models.CharField(verbose_name='School', max_length=255)
-    grade = models.IntegerField(verbose_name='Grade', default=0)
+    grade = models.CharField(verbose_name='Grade', default='N/A', max_length=255)
     event = models.ForeignKey(Event, verbose_name='Event', default=None, null=True)
 
     objects = PupilManager()
