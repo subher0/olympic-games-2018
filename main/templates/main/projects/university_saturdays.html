@@ -38,17 +38,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-md-6">
-                    <select class="custom-select form-control" name="auditory">
-                        <option {% if not form.auditory %} selected {% endif %} value="0">Аудитория</option>
-                        {% for auditory in auditories %}
-                            <option {% if form.auditory == auditory.id %} selected {% endif %}
-                                                                          value="{{ auditory.id }}">{{ auditory.auditory }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col-12 centered">
+                <div class="col-md-6 centered">
                     <button type="submit" class="btn btn-primary search-button">Найти</button>
                 </div>
             </div>

@@ -124,12 +124,9 @@ def eventSearch(request):
         form = EventSearchForm(request.GET)
         if form.is_valid():
             university = form.cleaned_data['university']
-            auditory = form.cleaned_data['auditory']
             events = Event.objects.all()
             if university != 0:
                 events = events.filter(university__id=university)
-            if auditory != 0:
-                events = events.filter(auditory__id=auditory)
 
             events = events.order_by('date').reverse()
         else:
