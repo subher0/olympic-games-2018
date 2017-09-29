@@ -22,14 +22,14 @@ class EventManager(models.Manager):
 
     def getAllEvents(self):
         try:
-            result = self.order_by('date')
+            result = self.order_by('isClosed', 'date')
         except Exception:
             result = None
         return result
 
     def getSomeEvents(self, amount):
         try:
-            result = self.order_by('date')[:amount]
+            result = self.order_by('isClosed', 'date')[:amount]
         except Exception:
             result = None
         return result

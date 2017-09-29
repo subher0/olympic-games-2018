@@ -128,7 +128,7 @@ def eventSearch(request):
             if university != 0:
                 events = events.filter(university__id=university)
 
-            events = events.order_by('date').reverse()
+            events = events.order_by('isClosed', 'date').reverse()
         else:
             error_message = 'Ошибки в полях формы'
     else:
