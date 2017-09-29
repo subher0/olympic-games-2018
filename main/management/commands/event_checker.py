@@ -10,7 +10,7 @@ class Command(BaseCommand):
         events = Event.objects.getFutureEvents()
         for event in events:
             print(event.title)
-            if event.date.timestamp() <= now().timestamp() + 60 * 60 * 24 and not event.isClosed:
+            if event.date.timestamp() <= now().timestamp() + 60 * 60 * 24 and now().weekday() == 5 and now().hour == 1 and not event.isClosed:
                 print(event.isClosed)
                 send_email_to_university_and_save(event)
 
