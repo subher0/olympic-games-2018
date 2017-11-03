@@ -1,0 +1,26 @@
+{% extends "main/gen_templ.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="col-lg-10 offset-lg-1">
+            <h2>Вход</h2>
+                {% if success_message and not error_message %}
+                    <h3 class="success-message">{{ success_message }}</h3>
+                {% elif error_message %}
+                    <h3 class="error-message">{{ error_message }}</h3>
+                {% endif %}
+            <form enctype="application/x-www-form-urlencoded" action="/management/login" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input name="login" class="form-control" placeholder="Логин" value="{{ form.data.login }}">
+                        <input type="password" name="password" class="form-control" placeholder="Пароль" value="{{ form.data.password }}">
+                    </div>
+                    <div class="col-lg-12 centered">
+                        <button type="submit" class="btn btn-primary search-button">Войти</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
