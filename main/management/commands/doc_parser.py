@@ -51,7 +51,7 @@ class Command(BaseCommand):
             eventTitle = row[3].value
             annotation = row[4].value
             eventType = row[5].value
-            eventAuditories = row[6].value.split(' и ')
+            eventAuditories = re.split(' и |, ', row[6].value)
             maxParticipants = int(maxParticipantsPattern.search(row[7].value).group(1))
 
             university = {}
