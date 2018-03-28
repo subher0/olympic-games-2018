@@ -19,7 +19,7 @@ class Article(models.Model):
     short_text = models.CharField(verbose_name='article short text', max_length=512, default='No description')
     text = models.TextField(verbose_name='article text')
     image = models.ImageField(verbose_name='article image', default='no_image.jpg', upload_to=make_filepath)
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     objects = ArticleManager()
 
     def __str__(self):

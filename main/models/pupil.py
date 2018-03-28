@@ -19,7 +19,7 @@ class Pupil(models.Model):
     phone = models.CharField(verbose_name='Phone', default='Nan', max_length=255)
     school = models.CharField(verbose_name='School', max_length=255)
     grade = models.CharField(verbose_name='Grade', default='N/A', max_length=255)
-    event = models.ForeignKey(Event, verbose_name='Event', default=None, null=True)
+    event = models.ForeignKey(Event, verbose_name='Event', default=None, null=True, on_delete=models.CASCADE)
 
     objects = PupilManager()
 
